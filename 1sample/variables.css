@@ -1,0 +1,6 @@
+:root {
+  /* example */
+  --color: #ffffff;
+  --px: 1em;
+  --font-size: calc(0.5em + 1vw);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+  <style>
+    /*
+    1 Фиксированный дизайн - px em rem (рекомендуется em rem)
+    2 Резиновый дизайн - % vw vh em rem (calc)
+    3 Адаптивный дизайн - media + px + em + rem
+    4 Отзывчивый дизайн - адаптив + резина 
+
+
+
+    */
+    * {
+      box-sizing: border-box;
+      font-size: calc(.5vw + .5em);
+
+    }
+
+    p {
+      font-size: 25px;
+    }
+
+    p {
+      font-size: 150%;
+    }
+
+    p span {
+      font-size: 100%;
+    }
+
+    /*
+    p {
+      font-size: 2em;
+      width: 10em;
+      height: 5em;
+      margin: 1em;
+      padding: 2em;
+    }
+
+    p {
+      font-size: 2rem;
+      width: 10rem;
+      height: 5rem;
+      margin: 1rem;
+      padding: 2rem;
+    }
+      */
+
+    p {
+      font-size: 1vw;
+    }
+
+    section {
+      font-size: 2em;
+      width: calc(10em + 10em);
+      height: 10em;
+      margin: 1em;
+      padding: 2em;
+      background: orange;
+      color: red;
+      border: 1px solid currentColor;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Consequatur, illum!</p>
+  <section>asdfsd
+
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+@import "reset.css";
+@import "variables.css";
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-align: right;
+}
+
+/* Псевдораспорки */
+
+.top_navigation ul::after,
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h3 {
+  text-align: center;
+}
+
+.wrapper {
+  width: 30em;
+  margin: auto;
+  font-size: calc(0.5em + 1vw);
+  padding: var(--px);
+}
+
+.logo {
+  background: var(--bg-color);
+  padding: 2em 1em;
+  margin-bottom: var(--mb);
+}
+
+header {
+  background: var(--bg-color);
+  padding: 5em 1em;
+  margin-bottom: var(--mb);
+}
+
+.top_navigation li {
+  background: var(--bg-color);
+  padding: 0.5em 1em;
+  float: left;
+  margin-right: var(--mr);
+  width: calc(100% / 4 - 3 * var(--mr) / 4);
+  text-align: center;
+}
+
+.top_navigation li:last-of-type {
+  margin-right: 0;
+}
+
+
+.top_navigation {
+  margin-bottom: var(--mb);
+}
+
+.about {
+  float: left;
+  background: var(--bg-color);
+  width: calc(55% - var(--mr) / 2);
+  padding: 7em 0;
+  margin-right: var(--mr);
+
+}
+
+aside {
+  float: left;
+  width: calc(45% - var(--mr) / 2);
+}
+
+.quick_links {
+  background-color: var(--bg-color);
+  padding: 3em 0;
+}
+
+.quick_links:first-of-type {
+  margin-bottom: 1em;
+}
+
+main {
+  margin-bottom: var(--mb);
+}
+
+footer {
+  background: var(--bg-color);
+  padding: 2em var(--px);
+}

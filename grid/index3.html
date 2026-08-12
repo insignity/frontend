@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    section {
+      display: grid;
+      /* лучше делать с repeat */
+      /* явные  */
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px 20px;
+
+      /* неявные */
+      /* для интернет магазинов */
+      grid-auto-rows: 100px;
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+    }
+
+    article {
+      background: gold;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <!-- явный грид -->
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <!-- неявный грид -->
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+  </section>
+</body>
+
+</html>

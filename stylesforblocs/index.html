@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      width: 10em;
+      height: 10em;
+      min-height: 10em;
+      border: 10px ridge red;
+      padding: 1em;
+      border-radius: 20% 50% 75% 100%;
+      /* overflow: hidden; */
+      overflow: auto;
+      outline: 1px solid blue;
+      outline-offset: 2px;
+      box-shadow: inset 2px 2px 5px rgb(7, 219, 35);
+      border-image: url("https://i.sstatic.net/sjbeu.png") 30 repeat;
+    }
+
+    section:first-of-type {
+      /*display: none;
+      visibility: hidden;*/
+    }
+
+    /* 
+    img {
+      margin: auto;
+      display: block;
+    } */
+
+    /* центрирование однострочного текста */
+    article {
+      width: 10em;
+      height: 10em;
+      min-height: 10em;
+      border: 1px ridge red;
+      text-align: center;
+      line-height: 10em;
+    }
+
+    /* если многострочный текст */
+    article p {
+      /* background: red; */
+      line-height: normal;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* центрирование блока */
+    article {
+      line-height: normal;
+      display: flex;
+    }
+
+    article div {
+      width: 20px;
+      margin: auto;
+      background: orange;
+      border: 1px solid black;
+    }
+
+    article div:last-of-type {
+      height: 3em;
+      line-height: 3em;
+    }
+  </style>
+</head>
+
+<body>
+  <section>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt similique obcaecati tenetur deleniti
+    dolor! Atque fugit aliquam iste officiis, quas non facilis provident, et minima voluptatum aspernatur sunt accusamus
+    porro eligendi suscipit hic illo cum soluta nobis itaque est commodi repudiandae delectus dolorum. Quod perspiciatis
+    nesciunt ab enim repellat doloremque minus debitis expedita laudantium iure. Est porro exercitationem magni repellat
+    nobis, minus aut ullam recusandae explicabo inventore officiis quae velit? Repellendus iste fugiat debitis
+    explicabo? Itaque, soluta distinctio. Necessitatibus vel fugiat architecto officiis. Animi quod consequatur, cum
+    facere odit dolore inventore minus similique aliquid! Earum delectus quam numquam incidunt facere.</section>
+  <section>2</section>
+
+  <!-- Центрирование блоков и текста внутри контента -->
+
+  <img src="gmail.png" alt="">
+  <article>
+    <p>Text<br>TEXT</p>
+  </article>
+
+  <article>
+    <div>1<br>2</div>
+    <div>2</div>
+  </article>
+
+
+</body>
+
+</html>

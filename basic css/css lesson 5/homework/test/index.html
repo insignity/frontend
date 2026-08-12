@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import "variables.css";
+    @import "reset.css";
+
+    input:not([type=password])::placeholder {
+      /* color: red; */
+    }
+
+    input:default {
+      /* background: red; */
+    }
+
+    input:focus::placeholder {
+      color: green
+    }
+
+    input[type=password]:focus:valid {
+      background: green;
+    }
+
+    input[type=password]:invalid {
+      background: red;
+    }
+
+    form:focus-within {
+      width: 300px;
+      padding: 10px;
+      background: var(--bg);
+    }
+
+    h1::after {
+      content: "Hello";
+      font-size: var(--primarySize);
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    a::after {
+      content: attr(href);
+      position: absolute;
+      background: green;
+      padding: 2px;
+    }
+
+    ::selection {
+      background: grey;
+    }
+
+    /* Для стилезации ссылки и при переходе  */
+    :target {
+      background: orange;
+      padding: 5px;
+      font-size: var(--primarySize);
+    }
+
+    :root {
+      background: darkkhaki;
+      --primarySize: 25px;
+      --basicFontFamily: Roboto, sans-serif;
+      --bg: pink
+    }
+
+    /* Отдельная страница для переменных */
+
+    /* Приоритетность и разрешение конфликтов */
+    p.paragraph a.link {
+      color: green;
+    }
+
+    .paragraph a.link {
+      color: red;
+    }
+
+    body {
+      /* color: darkred; */
+      /* margin padding background не наследуются */
+    }
+
+    p {
+      /* наследовать из родителя */
+      /* color: inherit; */
+      /* заводские настройки даже браузерные стили*/
+      color: initial;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="form">
+    <input type="text" placeholder="name">
+    <input type="password" placeholder="password" pattern="[a-zA-Z]{3}">
+  </form>
+  <h1></h1>
+  <a href="http:google.com" title="Нажми сюда">Ссылка на гугл - </a>
+  <a href="#1">p1</a>
+  <a href="#2">p1</a>
+  <a href="#3">p1</a>
+  <p id="1">Lorem ipsum dolor sit amet.</p>
+  <p id="2">Lorem ipsum dolor sit amet.</p>
+  <p id="3">Lorem ipsum dolor sit amet.</p>
+
+
+  <p class="paragraph"><a class="link" href="#">link</a></p>
+  <span>TEXT</span>
+</body>
+
+</html>

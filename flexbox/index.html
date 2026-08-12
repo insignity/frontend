@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .poem {
+      display: flex;
+      /* flex-direction: column; */
+      justify-content: space-between;
+      align-items: center;
+      /* flex-wrap: wrap; */
+      /* align-content: space-between; */
+      flex-flow: row wrap;
+
+
+
+
+      border: 1px solid red;
+      height: 20em;
+      width: 40em;
+
+    }
+
+    .poem>div:first-of-type {
+      align-self: flex-start;
+      order: 4;
+    }
+
+    .poem>div:nth-of-type(2) {
+      align-self: stretch;
+      order: 1;
+    }
+
+    .poem>div:last-of-type {
+      align-self: flex-end;
+      order: 2;
+    }
+
+    .poem>div {
+      border: 1px solid green;
+      background: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="poem">
+    <div>буря мглою</div>
+    <div>небо кроет</div>
+    <div>вихри снежные</div>
+    <div>крутя</div>
+  </div>
+</body>
+
+</html>

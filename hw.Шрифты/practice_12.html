@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Практическое задание 12</title>
+  <style>
+    body {
+      background: red;
+    }
+
+    h2 {
+      color: rgba(255, 255, 255, 1);
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    p {
+      height: 100px;
+      text-align: center;
+    }
+
+    h2+p {
+      background: rgba(0, 0, 0, 0.8);
+      color: var(--textColor);
+    }
+
+    p+p {
+      background: rgba(0, 0, 0, 0.2);
+      color: var(--textColor);
+    }
+
+    :root {
+      --textColor: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Заголовок</h2>
+  <p>Съешь же ещё этих мягких французских булок да выпей чаю.</p>
+  <p>Съешь же ещё этих мягких французских булок да выпей чаю.</p>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .radio {
+      display: none;
+    }
+
+    .custom-radio {
+      width: 1em;
+      height: 1em;
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    .lorem,
+    .custom-radio {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    .radio:checked+.custom-radio::after {
+      content: "";
+      border-radius: 50%;
+      background-color: blue;
+      position: absolute;
+      top: .1em;
+      left: .1em;
+      right: .1em;
+      bottom: .1em;
+    }
+  </style>
+</head>
+
+<body>
+  <label>
+    <input type="radio" name="radio" class="radio">
+    <span class="custom-radio"></span>
+    <span class="lorem">lorem</span>
+  </label>
+</body>
+
+</html>

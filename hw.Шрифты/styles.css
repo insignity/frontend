@@ -1,0 +1,39 @@
+@import url(fonts.css);
+
+h2 {
+  font-size: 1.4em;
+  font-family: Roboto;
+  font-style: oblique;
+  /* justify по ширине ровняет */
+  text-align: justify;
+  line-height: 120%;
+  word-spacing: 6px;
+  text-align: center;
+  color: brown;
+}
+
+p {
+  font-size: 1em;
+  font-family: OpenSans;
+  /* justify по ширине ровняет */
+  text-align: justify;
+  line-height: 100%;
+}
+
+
+b {
+  font-size: 1em;
+  font-family: OpenSans-bold;
+  /* justify по ширине ровняет */
+  text-align: justify;
+  line-height: 100%;
+}
+
+
+i {
+  font-size: 1em;
+  font-family: OpenSans-italic;
+  /* justify по ширине ровняет */
+  text-align: justify;
+  line-height: 100%;
+}

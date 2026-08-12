@@ -1,0 +1,22 @@
+/*ul li{background-color: yellow; border: 1px solid black}+*/
+/*li{background-color: yellow; border: 1px solid black}+*/
+/*ul>li{background-color: yellow; border: 1px solid black}+*/
+/*li a{color: green;}+*/
+/*li>a{color:yellow}+*/
+/*ul+li{background-color: aqua}+*/
+/*li+a{background-color: red}+*/
+/*h2+ul{background-color: yellow}+*/
+/*ul:last-child::before{content: open-quote}-*/
+/*h2:first-child{color: chocolate}-*/
+/*li:nth-child(2n){background-color: yellow}-*/
+/*li:nth-child(n){background-color: yellow}+*/
+/*ul:nth-child(even){background-color: aquamarine}-*/
+ul:nth-last-child(even) {
+  background: red;
+}
+
+/*ul:first-of-type{background-color: chocolate}-*/
+/*ul:last-of-type{background-color: chocolate}+*/
+/*ul:first-child{background-color: chocolate}+*/
+/*ul:nth-of-type(even){background-color: chocolate}+*/
+/*ul:nth-last-of-type(even){background-color: chocolate} -*/

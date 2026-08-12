@@ -1,0 +1,131 @@
+/* Комбинаторы 
+1. Предки и потомки(обращение через пробел)
+2. Родители и дети(обращение через > )
+3. Сестринские(~) и смежные(+)
+4. групповые селекторы(,) 
+
+ 1. предки потомки - несколько уровней вложенности
+body span {
+  color: red;
+}
+
+ 2. Родители дети - первый уровень вложенности
+li>span {
+  color: orange;
+}
+
+ 3. Сестринские = один родитель 
+h2~ul {
+  background: grey;
+}
+
+3. Смежные - рядом стоят
+h2+ul {
+  background: greenyellow;
+}
+
+body>h2+ul span {
+  color: purple;
+}
+
+ с классом second и с аттрибутом align и параметром center 
+body>h2.second+ul span[align=center] {
+  color: purple;
+}
+
+ 4. групповые селекторы(,) 
+p,
+span,
+h1.second,
+h2+ul {
+  color: fuchsia
+}
+*/
+
+/* Структурные псевдоклассы - помогают находить теги 
+:first-child
+:last-child      
+:only-child       единственный ребенок
+:nth-child        сверху вниз считает всех детей и выбирает по формуле
+:nth-last-child   снизу вверх
+
+--------------------
+смотрит только на типы например только ul 
+:first-of-type    первый элемент среди своих братьев и сестер, который является ul
+:last-of-type     последний элемент среди своих братьев и сестер, который является ul
+:only-of-type     единственный элемент среди своих братьев и сестер, который является ul
+:nth-of-type      считает только элементы определенного типа, например ul и выбирает по формуле
+:nth-last-of-type считает только элементы определенного типа, например ul и выбирает по формуле, но считает снизу вверх
+
+
+Найди мне ul который является первым ребенком и 
+*/
+
+ul:first-child {
+  background: black;
+}
+
+ul:last-child {
+  background: red;
+}
+
+li:only-child {
+  background: cyan;
+}
+
+/* четвертый ребенок */
+h2:nth-child(4) {
+  background: magenta;
+}
+
+/* четные */
+h2:nth-child(even) {
+  background: coral;
+}
+
+h2:nth-child(odd) {
+  background: orangered;
+}
+
+/* каждый 3й и начинать считать с 1 элемента */
+h2:nth-child(3n+1) {
+  background: chartreuse;
+}
+
+/* начинает считать снизу наверх */
+ul:nth-last-child(2) {}
+
+ul:first-of-type {}
+
+/* выделить каждый третий элемент где li обернут в контейнер тест   */
+
+div.test li:nth-child(3n) {
+  background: green;
+}
+
+/*  все ячейки которые четные , но только в тех 
+строках которые следует после 1й строки заголовка и находятся внутри тбоди  */
+tbody td:nth-child(even) {
+  background: grey;
+}
+
+/* выбрать только 2й параграф который является потомком артикла но только если перед ним нет заголовка h2*/
+article p:nth-of-type(2):not(h2+p) {
+  background: red;
+}
+
+a:link {
+  color: blue;
+}
+
+a:hover {
+  background: yellow;
+}
+
+a:active {
+  background: red;
+}
+
+a:visited {
+  color: gray;
+}

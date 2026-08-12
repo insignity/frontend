@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    section {
+      display: grid;
+      /* растяжение динамически по ширине елемента  */
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+      grid-gap: 10px;
+    }
+
+    article {
+      background: gold;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article>1</article>
+    <article>2</article>
+    <article>3</article>
+  </section>
+</body>
+
+</html>

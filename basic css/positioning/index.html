@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="" media="all and (max-width: 550)">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      width: 10em;
+      height: 10em;
+    }
+
+    section:first-of-type {
+      background: red;
+      position: absolute;
+      top: 5em;
+      left: 5em;
+    }
+
+    section:nth-of-type(2) {
+      background: yellow;
+      position: relative;
+      left: 15em;
+      top: 15em;
+      z-index: 1;
+    }
+
+    section:last-of-type {
+      background: green;
+      position: sticky;
+      height: 4em;
+      width: 4em;
+      bottom: 0;
+      right: 0;
+    }
+
+    figure {
+      background: url("https://theportablewife.com/wp-content/uploads/best-places-to-take-pictures-in-paris-newfeatured.jpg");
+      height: 50em;
+      position: relative;
+    }
+
+    figcaption {
+      background: rgba(0, 0, 0, .5);
+      color: #fff;
+      position: absolute;
+      height: 5em;
+      width: 20em;
+      left: 50%;
+      top: 50%;
+      margin-left: -10em;
+      margin-top: -2.5em;
+      line-height: 5em;
+      text-align: center;
+      /* bottom: 0;
+      left: 0;
+      right: 0; */
+    }
+  </style>
+</head>
+
+<body>
+  <section>absolut</section>
+  <section>relative</section>
+  <section>fixed</section>
+
+  <!-- <figure>
+    <figcaption>text</figcaption>
+  </figure> -->
+</body>
+
+</html>

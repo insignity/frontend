@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section {
+      min-height: 20em;
+      max-width: 1200px;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    article:first-of-type {
+      background: green;
+
+      /* flex-basis: 500px;
+      flex-grow: 10;
+      flex-shrink: 4; */
+
+
+      /* flex: 1 4 500px; */
+
+      width: 500px;
+      flex: auto;
+    }
+
+    article:last-of-type {
+      background: blue;
+
+
+      /* flex-basis: 350px;
+      flex-grow: 1;
+      flex-shrink: 1; */
+
+
+      /* flex: 1 2 350px; */
+
+      width: 350px;
+      flex: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article>1</article>
+    <article>2</article>
+  </section>
+</body>
+
+</html>

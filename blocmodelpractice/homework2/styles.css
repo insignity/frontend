@@ -1,0 +1,35 @@
+@import "reset.css";
+@import "variables.css";
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-align: right;
+}
+
+.wrapper {
+  width: 30em;
+  margin: auto;
+  padding: 1em;
+  font-size: calc(0.5em + 1vw);
+}
+
+header,
+footer {
+  background: var(--hf-bg-color);
+  color: var(--hf-color);
+  padding: 2em var(--px);
+  margin-bottom: var(--mx);
+}
+
+main {
+  background: var(--main-bg-color);
+  color: var(--main-color);
+  padding: var(--px);
+  min-height: 20em;
+  margin-bottom: var(--mx);
+}
+
+footer {
+  margin-bottom: 0;
+}

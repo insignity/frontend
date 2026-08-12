@@ -1,0 +1,11 @@
+:root {
+  --primary-bg-color: rgb(255, 242, 204);
+  --border: 1px solid #000000;
+  --px: 1em;
+  --mb: 1em;
+  --mr: 1em;
+  --mt: 1em;
+  --color: #000000;
+}
+
+/* 1vw = ширина:100 */

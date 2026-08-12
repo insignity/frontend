@@ -1,0 +1,18 @@
+:root {
+  --bg-color: #cccccc;
+  --color: #444444;
+  --color-light: #54c0c4;
+  --color-hover-dark: #0A5060;
+  --px: 1em;
+  --pb: 1em;
+  --mb: 1em;
+  --mr: 1em;
+  --ml: 1em;
+  --mt: 1em;
+  --mx: 1em;
+  --my: 1em;
+  --font-size: calc(0.5em + 1vw);
+
+}
+
+/* 1vw = ширина:100 */

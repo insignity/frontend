@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      display: grid;
+      /* лучше делать с repeat */
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px 20px;
+      /* как ты хочешь видеть метку области */
+      grid-template-areas:
+        "header header header"
+        "asideLeft main asideRight"
+        "footer footer footer";
+    }
+
+    /* на мобилке до 500px чтобы блоки шли все друг за другом вниз 
+    и учесть mobile first 
+
+*/
+    header {
+      grid-area: header;
+    }
+
+    .asideLeft {
+      grid-area: asideLeft;
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    .asideRight {
+      grid-area: asideRight;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+
+    article {
+      background: gold;
+    }
+
+    header,
+    .asideLeft,
+    .asideRight,
+    main,
+    footer {
+      background: gold;
+    }
+
+    @media all and (max-width: 1024px) {
+
+      /* left main 50% */
+      /* header footer right 100 */
+      body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 100px);
+        grid-template-areas:
+          "header header"
+          "asideLeft main"
+          "asideRight asideRight"
+          "footer footer";
+      }
+
+    }
+
+
+    @media all and (max-width: 500px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 100px);
+        grid-template-areas:
+          "header"
+          "main"
+          "asideLeft"
+          "asideRight"
+          "footer";
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>header</header>
+  <aside class="asideLeft">left</aside>
+  <main>main</main>
+  <aside class="asideRight">right</aside>
+  <footer>footer</footer>
+</body>
+
+</html>

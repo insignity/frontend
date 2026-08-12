@@ -1,0 +1,73 @@
+/* h1 это селектор любой другой тег это селектор */
+
+
+/* на самом верху */
+@charset "UTF-8";
+/* если поддерживает свойство */
+@supports (display: flex) {
+  body {
+    background: green
+  }
+}
+
+/* если не поддерживает */
+@supports not (display: flex) {
+  body {
+    background: red;
+    float: left;
+  }
+}
+
+@import "home.css";
+
+/* вендорные префиксы
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -ms-transition: 1s;
+ */
+
+/* обращение по селектору */
+h1 {
+  text-align: center;
+  background: orange;
+  transition: 1s;
+  color: red;
+}
+
+/* обращение по классу */
+.header_bg {
+  background: blue;
+}
+
+.header_color {
+  color: purple;
+}
+
+/* обращение по id - # */
+
+/* универсальный селектор */
+* {
+  font-size: 25px;
+}
+
+/* обращение по тегам []^$*/
+/* если это встроенные то работает */
+input[type=text] {
+  background: purple;
+}
+
+input[type=password] {
+  background: lightcoral;
+}
+
+/* заканчивается на pdf */
+a[href$="pdf"] {
+  /* убираем подчеркивание */
+  text-decoration: none;
+}
+
+/* начинается на  */
+a[href^='./test'] {
+  font-size: 50px;
+}
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a[name="red"]:hover,
+    p:first-of-type:active {
+      color: red;
+    }
+
+    a[name="blue"]:hover,
+    p:last-of-type:active {
+      color: blue
+    }
+
+    a[name="green"]:hover,
+    p:nth-of-type(2):active {
+      color: green
+    }
+
+    p:first-of-type::first-letter {
+      font-size: x-large;
+      color: red;
+    }
+
+    p:nth-of-type(2)::first-letter {
+      font-size: x-large;
+      color: green
+    }
+
+    p:last-of-type::first-letter {
+      font-size: x-large;
+      color: blue
+    }
+
+    a,
+    p:active::first-letter {
+      color: black
+    }
+    /* 
+
+    Pseudoelements
+    ::after{
+    content: 
+    }
+
+    ::before{
+    content:
+    }
+
+    ::placeholder{
+    }
+
+    ::backdrop{}<dialog>
+
+    ::first-line{}
+
+    ::first-letter{}
+
+    ::selection{}
+
+    ==========================
+
+    Pseudoclasses
+    :link   -  непосещенная ссылка
+    :visited
+    :focus
+    :hover
+    :active
+    :anylink
+    :not
+    :is
+    
+    Pseudoclasses for forms
+    :enabled{}
+    :disabled{}
+    :default
+    :checked
+    :valid
+    :invalid
+    :in-range
+    :out-of-range
+    :required
+    :optional
+    :placeholder-shown
+
+    */
+  </style>
+</head>
+
+<body>
+  <h2 class="red">Red, Green and Blue page</h2>
+
+
+  <a href="" name="red">Red</a><span>, </span>
+  <a href="" name="green">Green</a>
+  <span> and </span>
+  <a href="" name="blue">Blue</a>
+
+  <p>Красный Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, explicabo, culpa natus nesciunt
+    reiciendis saepe
+    laudantium quaerat dolorum illo voluptates ipsum porro rem, blanditiis facilis omnis voluptate minus praesentium
+    nemo.</p>
+  <p>Зеленый Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, explicabo, culpa natus nesciunt
+    reiciendis saepe
+    laudantium quaerat dolorum illo voluptates ipsum porro rem, blanditiis facilis omnis voluptate minus praesentium
+    nemo.</p>
+  <p>Синий Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, explicabo, culpa natus nesciunt reiciendis
+    saepe
+    laudantium quaerat dolorum illo voluptates ipsum porro rem, blanditiis facilis omnis voluptate minus praesentium
+    nemo.</p>
+</body>
+
+</html>

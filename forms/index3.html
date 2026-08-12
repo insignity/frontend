@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Contact Form</title>
+  <link rel="stylesheet" media="screen" href="styles.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Псевдораспорка */
+
+
+    ul {
+      list-style-type: none;
+    }
+
+    :focus {
+      outline: none;
+    }
+
+    body {
+      font-size: 18px;
+      font-family: "Lucida Grande", sans-serif;
+      color: black;
+    }
+
+    .form_hint,
+    .required_notification {
+      font-size: 12px;
+    }
+
+    /* Макет формы */
+    .contact_form>ul {
+      width: 800px;
+    }
+
+    .contact_form ul li {
+      border-bottom: 1px solid #eee;
+      padding: 12px;
+    }
+
+    .contact_form ul li:first-of-type,
+    .contact_form ul li:last-of-type {
+      border-bottom: 1px solid #555;
+    }
+
+    /* header form */
+    .contact_form li:first-of-type {
+      display: flex;
+
+    }
+
+    .contact_form h2 {
+      margin: auto;
+      margin-left: 0;
+    }
+
+    .contact_form .required_notification {
+      margin: auto;
+      margin-right: 0;
+      color: red;
+    }
+
+    /* aligning of form */
+    .contact_form label {
+      display: inline-block;
+      width: 150px;
+    }
+
+    .contact_form input {
+      width: 250px;
+      padding: 5px 10px;
+    }
+
+    .contact_form textarea {
+      width: 300px;
+      padding: 10px 10px;
+      resize: none;
+    }
+
+    .contact_form .submit {
+      margin-left: 156px;
+    }
+
+    .contact_form li:nth-last-of-type(2) label {
+      vertical-align: top;
+    }
+
+    /* styling inputs */
+
+    .contact_form input,
+    .contact_form textarea {
+      box-shadow: inset 0 10px 15px #eee, 0 0 3px #ccc;
+      border-radius: 4px;
+      border: 1px solid #aaa;
+      padding-right: 30px;
+      transition: .5s;
+    }
+
+    .contact_form input:focus,
+    .contact_form textarea:focus {
+      box-shadow: 0 0 3px #ccc;
+      border: 1px solid #555;
+      padding-right: 50px;
+    }
+
+    /* Form validation */
+    .contact_form input:required,
+    .contact_form textarea:required {
+      background-image: url("images/red_asterisk.png");
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+
+    .contact_form input:focus:invalid,
+    .contact_form textarea:focus:invalid {
+      border-color: red;
+      box-shadow: 0 0 3px red;
+      background-image: url("images/invalid.png");
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+
+    .contact_form input:valid,
+    .contact_form textarea:valid {
+      border-color: green;
+      box-shadow: 0 0 3px green;
+      background-image: url("images/valid.png");
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+
+    /* forms hint */
+    .contact_form .form_hint {
+      display: none;
+      background-color: red;
+      color: white;
+      padding: 1px 5px;
+      border-radius: 2px;
+    }
+
+    .contact_form input:focus+.form_hint {
+      display: inline-block;
+    }
+
+    .contact_form input:valid+.form_hint {
+      display: inline-block;
+      background: green;
+    }
+
+    /* Submit */
+
+    .contact_form .submit {
+      background-color: #68b12f;
+      background: linear-gradient(top, #68b12f, #50911e);
+      border: 1px solid #509111;
+      border-bottom: 1px solid #5b992b;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 0 0 #9fd574;
+      color: white;
+      font-weight: bold;
+      padding: 6px 20px;
+      text-align: center;
+      text-shadow: 0 -1px 0 #396715;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="contact_form" action="#" method="post" name="contact_form">
+    <ul>
+      <li>
+        <h2>Contact Us</h2>
+        <span class="required_notification">* Denotes Required Field</span>
+      </li>
+      <li>
+        <label for="name">Name:</label>
+        <input type="text" placeholder="John Doe" required />
+      </li>
+      <li>
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="john_doe@example.com" required />
+        <span class="form_hint">Proper format "name@something.com"</span>
+      </li>
+      <li>
+
+        <label for="website">Website:</label>
+        <input type="url" name="website" placeholder="http://johndoe.com" required pattern="(http|https)://.+">
+        <span class="form_hint">Proper format "http://someaddress.com"</span>
+      </li>
+      <li>
+        <label for="message">Message:</label>
+        <textarea name="message" cols="40" rows="6" required></textarea>
+      </li>
+      <li>
+        <button class="submit" type="submit">Submit Form</button>
+      </li>
+    </ul>
+  </form>
+</body>
+
+</html>

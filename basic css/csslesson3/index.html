@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Selector Challenge — уровни для практики селекторов</title>
+  <style>
+    /* === ИНСТРУКЦИЯ ===
+           Это HTML+CSS "игра" — чтобы пройти уровень, откройте этот файл в редакторе
+           и добавьте / измените CSS в секции /* ВАШ CSS НИЖЕ ниже.
+        Цель: написать селекторы (комбинаторы, псевдоклассы, псевдоэлементы), которые
+                                                                              изменят внешний вид элементов согласно условиям уровня.
+
+                                                                              Правила:
+        - Модифицируйте только блок, отмеченный как "ВАШ CSS НИЖЕ".
+        - Нельзя добавлять JavaScript.
+        - Нельзя менять HTML (если не указано иначе в задании).
+
+                                                              Подсказки и решения находятся в конце файла (закомментированы).
+                                                                                                                            */
+
+    /* --- БАЗОВАЯ СТИЛИСТИКА --- */
+    body {
+      font-family: Inter, system-ui, Segoe UI, Roboto, Arial;
+      background: #0f1724;
+      color: #e6eef8;
+      display: flex;
+      min-height: 100vh;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px
+    }
+
+    .wrap {
+      width: 1100px
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 0 0 18px
+    }
+
+    .level {
+      background: #091025;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .6)
+    }
+
+    .row {
+      display: flex;
+      gap: 18px
+    }
+
+    .card {
+      background: #071022;
+      padding: 14px;
+      border-radius: 10px;
+      width: 100%
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px
+    }
+
+    .item {
+      background: #123047;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600
+    }
+
+    .hint {
+      color: #9fb2c9;
+      font-size: 13px;
+      margin-top: 10px
+    }
+
+    .goal {
+      background: #071827;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px
+    }
+
+    /* === ВАШ CSS НИЖЕ: сюда добавляйте свои селекторы, чтобы пройти уровни === */
+
+    div.group-1 li:nth-child(3n):not(:last-child) {
+      background: red;
+    }
+
+    div.form-block input[type=checkbox]+label {
+      color: red;
+    }
+
+    .cards .card.item:first-of-type:not(.foo)::after {
+      content: "here"
+    }
+
+    div.matrix *>*>* {
+      background: red;
+    }
+
+
+    /* с начала мы ищем потом только исключения */
+    .nav a:nth-child(even):not(.disabled) {
+      color: red;
+    }
+
+    .status-list.enabled .item.is-active+.item .solved .item {
+      filter: grayscale(.7) brightness(.75);
+    }
+
+    .item._ok {
+      outline: 3px solid #26a69a;
+      box-shadow: 0 6px 20px rgba(38, 166, 154, .12)
+    }
+
+    .item._marked::after {
+      content: "✓";
+      display: inline-block;
+      margin-left: 6px;
+      font-weight: 900
+    }
+
+    /* кнопка-подсказка для локального просмотра */
+    .controls {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px
+    }
+
+    .btn {
+      background: #123c58;
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      font-size: 13px
+    }
+
+    .note {
+      font-size: 13px;
+      color: #9fb2c9
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>CSS Selector Challenge — практика комбинаторов, псевдоклассов и псевдоэлементов</h1>
+
+    <div class="level">
+
+      <div class="hint">Цель: выделить (поменять фон) у каждого третьего &lt;li&gt; внутри контейнера
+        <code>.group-1</code>, но исключая те элементы, которые являются последним ребёнком своего списка.
+      </div>
+
+      <div class="row">
+        <div class="card">
+          <div class="grid group-1">
+            <ul
+              style="grid-column:span 6; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; list-style:none; padding:0">
+              <li class="item">a</li>
+              <li class="item">b</li>
+              <li class="item">c</li>
+              <li class="item">d</li>
+              <li class="item">e</li>
+              <li class="item">f</li>
+              <li class="item">g</li>
+              <li class="item">h</li>
+              <li class="item">i</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="level">
+      <div class="goal">Уровень 2 — <b>комбинатор соседства + атрибутный селектор</b>
+        <div class="hint">Цель: найти label, который идёт сразу после input[type=checkbox] внутри блока
+          <code>.form-block</code>, и изменить его стиль (например, рамку).
+        </div>
+      </div>
+      <div class="row">
+        <div class="card form-block">
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <input id="c1" type="checkbox"><label class="item" for="c1">Option 1</label>
+            <input id="c2" type="checkbox"><label class="item" for="c2">Option 2</label>
+            <input id="c3" type="checkbox"><label class="item" for="c3">Option 3</label>
+            <input id="c4" type="text"><label class="item" for="c4">Not a checkbox</label>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="level">
+      <div class="goal">Уровень 3 —
+        <div class="hint">Цель: добавить ::after с текстом только для карточек, которые являются первым-of-type в
+          родителе, но не имеют класс <code>.foo</code>.</div>
+      </div>
+      <div class="row">
+        <div class="card cards">
+          <div class="card item foo">Card A (.foo)</div>
+          <div class="card item">Card B</div>
+          <div class="card item">Card C</div>
+          <div class="card item">Card D</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="level">
+      <div class="goal">Уровень 4 — <b>комбинация потомка и универсального селектора (*)</b>
+        <div class="hint">Цель: подсветить каждый элемент внутри контейнера <code>.matrix</code>, который находится на
+          глубине ровно 2 (ребёнок ребёнка), используя комбинированный селектор.</div>
+      </div>
+      <div class="row">
+        <div class="card matrix">
+          <div class="row">
+            <div>
+              <div class="item">lvl1
+                <div>
+                  <div class="item">lvl2a</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="item">lvl1
+                <div>
+                  <div class="item">lvl2b</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="level">
+      <div class="goal">Уровень 5 — <b>:not + комбинированные псевдоклассы</b>
+        <div class="hint">Цель: выделить все &lt;a&gt; внутри блока <code>.nav</code>, которые <b>не</b> имеют класс
+          <code>.disabled</code> и которые являются только чётными детьми.
+        </div>
+      </div>
+      <div class="row">
+        <div class="card nav">
+          <nav style="display:flex; gap:10px">
+            <a class="item" href="#">Home</a>
+            <a class="item disabled" href="#">Profile</a>
+            <a class="item" href="#">Blog</a>
+            <a class="item" href="#">About</a>
+            <a class="item disabled" href="#">Shop</a>
+            <a class="item" href="#">Contact</a>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="level">
+      <div class="goal">Уровень 6 — <b>сложный селектор с соседством и псевдоклассом состояния</b>
+        <div class="hint">Цель: при помощи селектора (без изменения HTML) визуально пометить те .item в .status-list,
+          которые следуют за элементом с текстом "active" (имитируемого классом <code>.is-active</code>), но только если
+          они являются следующими соседями (см. +) и только когда их родитель имеет класс <code>.enabled</code>.</div>
+      </div>
+      <div class="row">
+        <div class="card">
+          <div class="status-list enabled">
+            <div class="item">inactive</div>
+            <div class="item is-active">active</div>
+            <div class="item">next-1</div>
+            <div class="item">next-2</div>
+            <div class="item is-active">active</div>
+            <div class="item">next-3</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

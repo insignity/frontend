@@ -1,0 +1,58 @@
+@import "reset.css";
+@import "variables.css";
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-align: right;
+}
+
+.wrapper {
+  width: 30em;
+  margin: auto;
+  padding: 1em;
+  font-size: calc(0.5em + 1vw);
+}
+
+/* Псевдораспорка */
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+header,
+footer {
+  background: var(--hf-bg-color);
+  color: var(--hf-color);
+  padding: 2em var(--px);
+  margin-bottom: var(--mb);
+}
+
+section {
+  background: var(--main-bg-color);
+  color: var(--main-color);
+  padding: var(--px);
+  min-height: 20em;
+  width: calc(60% - var(--mr) / 2);
+  float: left;
+  margin-right: var(--mr);
+}
+
+aside {
+  background: var(--aside-bg-color);
+  color: var(--aside-color);
+  padding: var(--px);
+  float: left;
+  width: calc(40% - var(--mr) / 2);
+  min-height: 20em;
+}
+
+main {
+  margin-bottom: var(--mb);
+}
+
+footer {
+  margin-bottom: 0;
+}

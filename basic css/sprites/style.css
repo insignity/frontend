@@ -1,0 +1,61 @@
+body {
+    padding: 20px;
+    font-family: "Tahoma", sans-serif;
+}
+
+.btn {
+    display: block;
+    width: 160px;
+    margin: 20px auto;
+    padding: 12px;
+    color: white;
+    background: #34495e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-add {
+    background: #27ae60;
+}
+
+.btn-remove {
+    background: #c0392b;
+}
+
+.icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin: 0 5px;
+    vertical-align: bottom;
+    background: url('https://idg.net.ua/blog/wp-content/uploads/sprites1.png') no-repeat;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.icon-add {
+
+    background-position: -100px -70px;
+}
+
+
+
+
+
+.icon-edit {
+background-position: -99px -70px;
+}
+
+.icon-remove {
+
+}
+
+.full-sprite {
+    height: 400px;
+    margin: 50px auto;
+    background: #34495e url('https://idg.net.ua/blog/wp-content/uploads/sprites1.png') no-repeat 50% 50%;
+    border-radius: 5px;
+}
+
+/*-407px -96px — элементу с классом icon-add,
+Цель 2-96px -72px — элементу с классом icon-edit,
+Цель 3-456px 0 — элементу с классом icon-remove. */

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Псеводраспорка */
+    nav>ul::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav>ul {
+      width: 100%;
+      height: 50px;
+    }
+
+    nav>ul>li {
+      float: left;
+      text-shadow: 0 -1px 1px black;
+      font-weight: 600;
+      width: calc(100%/5);
+    }
+
+    nav>ul>li>a {
+      display: block;
+      padding: 1em 0;
+      text-align: center;
+      background-image: linear-gradient(to bottom, #5B5A5B 50%, #3D3C3D 50%);
+      color: #C3C2C3;
+      text-shadow: 0 -1px 1px black;
+      font-weight: 600;
+    }
+
+    nav>ul>li:first-child a {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    nav>ul>li:last-child a {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    nav>ul>li:not(:first-of-type)>a {
+      border-left: 1px solid #636263;
+    }
+
+    nav>ul>li:not(:last-of-type)>a {
+      border-right: 1px solid #2b2b2b;
+    }
+
+    nav>ul>li>a:hover {
+      color: white;
+      box-shadow: inset 0px 10px 20px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 1px 1px black;
+      border: none;
+    }
+
+
+    .users>a,
+    .settings>a {
+      position: relative;
+    }
+
+    .users>a>span,
+    .settings>a>span {
+      position: absolute;
+      right: 1.4em;
+    }
+
+    .users>a>.hover,
+    .settings>a>.hover {
+      display: none;
+    }
+
+    .users>a:hover>.idle,
+    .settings>a:hover>.idle {
+      display: none;
+    }
+
+    .users>a:hover>.hover,
+    .settings>a:hover>.hover {
+      display: inline;
+    }
+
+    .users,
+    .settings {
+      position: relative;
+    }
+
+    .usersDropdown,
+    .settingsDropdown {
+      display: none;
+      position: absolute;
+      width: 100%;
+      background: #d6d6d6;
+      border: none;
+    }
+
+    .usersDropdown>li,
+    .settingsDropdown>li {
+      border: 1px solid white;
+    }
+
+    .usersDropdown>li>a,
+    .settingsDropdown>li>a {
+      text-align: center;
+      display: block;
+      padding: 1em 0;
+      color: #525252;
+      text-shadow: none;
+    }
+
+    .users:hover>.usersDropdown,
+    .settings:hover>.settingsDropdown {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="">Dashboard</a></li>
+      <li><a href="">Posts</a></li>
+      <li class="users">
+        <a href="">Users<span class="idle">></span><span class="hover">v</span></a>
+        <ul class="usersDropdown">
+          <li><a href="">Joshua Hibbert</a></li>
+          <li><a href="">Kyle Bragger</a></li>
+          <li><a href="">Jack Rugile</a></li>
+        </ul>
+      </li>
+      <li class="settings">
+        <a href="">Settings<span class="idle">></span><span class="hover">v</span></a>
+        <ul class="settingsDropdown">
+          <li><a href="">SEO</a></li>
+          <li><a href="">Style</a></li>
+          <li><a href="">Plugins</a></li>
+          <li><a href="">Security</a></li>
+        </ul>
+      </li>
+      <li><a href="">View Site</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>

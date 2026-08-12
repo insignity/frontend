@@ -1,0 +1,31 @@
+  @font-face {
+    font-family: Roboto;
+    src: url('./fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: OpenSans;
+    src: url('./fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: OpenSans-bold;
+    src: url('./fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: OpenSans-italic;
+    src: url('./fonts/OpenSans/OpenSans-Italic.ttf') format('truetype');
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: italic;
+  }

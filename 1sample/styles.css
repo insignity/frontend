@@ -1,0 +1,9 @@
+@import "reset.css";
+@import "variables.css";
+@import "fonts.css";
+
+* {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+  font-family: sans-serif;
+}

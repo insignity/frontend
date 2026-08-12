@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      display: grid;
+      grid-template-columns: 150px 150px 150px;
+      border: 1px solid red;
+      height: 100vh;
+
+      /* размещает grid */
+      /* align-content: start; */
+      /* justify-content: center; */
+
+      /* align-content justify-content */
+      place-content: center center;
+
+      /* размещает детей внутри ячейки */
+      justify-items: center;
+      align-content: center;
+    }
+
+    article {
+      background: grey;
+      border: 1px solid black;
+
+    }
+
+    article:first-of-type {
+
+      /* для конкретного ребенка */
+      /* align-self: center; */
+      /* justify-self: start; */
+
+      place-self: center start;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <article>1</article>
+    <article>2</article>
+    <article>3</article>
+  </div>
+</body>
+
+</html>

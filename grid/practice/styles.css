@@ -1,0 +1,570 @@
+@import "reset.css";
+@import "variables.css";
+@import "fonts.css";
+
+* {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+  font-family: "Roboto", sans-serif;
+}
+
+.bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 30em 1fr 22em;
+  grid-template-columns: 1fr;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2.6em 17.5em 17.5em 1.3em;
+  grid-template-rows: repeat(auto-fill, minmax(1.3em, 1fr));
+  background-image: url("./src/images/headboard.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+
+header figure {
+  grid-row: 3/5;
+  grid-column: 1/2;
+}
+
+header figure .header-logo {
+  width: 100%;
+  height: 100%;
+}
+
+header nav {
+  grid-row: 3/5;
+  grid-column: 4/5;
+}
+
+header nav:hover {
+  filter: brightness(0) invert(1);
+}
+
+header nav figure {
+  justify-items: center;
+  text-transform: uppercase;
+  font-size: .3em;
+}
+
+header nav figure img {
+  display: block;
+  height: 1.3em;
+  width: 1.6em;
+}
+
+header nav figure p {
+  font-size: 1em;
+}
+
+header .description {
+  grid-row: 10/ 15;
+  grid-column: 1/ span 2;
+}
+
+
+header .description h1,
+header .description h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+header .description p {
+  font-size: .8em;
+  font-weight: 400;
+}
+
+/* MAIN */
+
+main {
+  display: grid;
+  grid-template-rows: 16.6em repeat(2, 17.1em) 30em 17.1em;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+main h2 {
+  font-size: .6em;
+}
+
+main .snowboarder,
+main .sed_itunes,
+main .instagram_spotify {
+  grid-column: span 2;
+}
+
+main .sed_itunes {
+  display: flex;
+  align-items: center;
+  padding-left: 2em;
+}
+
+main .sed_itunes h2 {
+  text-transform: uppercase;
+  margin-bottom: .8em;
+}
+
+main .sed_itunes p {
+  font-size: 1.08em;
+  font-weight: 300;
+}
+
+main .quote {
+  background: rgb(243, 241, 239);
+}
+
+main .instagram_spotify {
+  display: flex;
+  align-items: center;
+  padding-left: 3.5em;
+}
+
+
+main .instagram_spotify,
+main .itunes {
+  color: white;
+}
+
+main .instagram_spotify h2,
+main .itunes h2 {
+  text-transform: uppercase;
+  margin-bottom: 1.3em;
+}
+
+main .instagram_spotify p,
+main .itunes p {
+  font-weight: 300;
+  margin-bottom: 1.3em;
+  font-size: 1em;
+}
+
+main .round-button {
+  border-radius: 2em;
+  border: .1em solid white;
+  background: rgba(0, 0, 0, 0);
+  padding: .6em .8em;
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: 500;
+  letter-spacing: .1em;
+  color: white;
+}
+
+main .round-button:hover {
+  color: black;
+  border-color: black;
+}
+
+main .spotify {
+  background: rgb(46, 189, 89);
+}
+
+main .itunes,
+main .dark-grey {
+  background: rgb(40, 43, 47)
+}
+
+main .dark-blue,
+main .instagram {
+  background-color: rgb(63, 114, 155);
+}
+
+
+main .promo {
+  display: grid;
+  grid-column: span 3;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 13em;
+  color: rgb(46, 189, 89);
+}
+
+main .promo .promo-card {
+  display: flex;
+  align-items: center;
+  padding-left: 2.6em;
+}
+
+main .promo h2 {
+  text-transform: uppercase;
+  margin-bottom: .3em;
+}
+
+main .promo h3 {
+  font-size: .55em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+
+main .promo p {
+  color: rgb(249, 249, 249);
+  font-size: .4em;
+}
+
+main .promo p:last-of-type {
+  margin-bottom: 1em;
+}
+
+main .promo .promo-card,
+footer {
+  background: rgb(33, 34, 39);
+}
+
+main .promo .promo-card .promo-call button {
+  font-size: .6em;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: rgb(46, 189, 89);
+  border-color: rgb(46, 189, 89);
+}
+
+main .promo .promo-card .promo-call button svg {
+  width: .5em;
+  height: .5em;
+  fill: rgb(46, 189, 89);
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: 9.4em 7.6em 12.6em;
+  grid-template-rows: repeat(auto-fill, minmax(.6em, 1fr));
+  gap: 0 4em;
+}
+
+
+footer .amazing-dude {
+  grid-column: 1/2;
+  grid-row: 1/ 19;
+}
+
+footer .amazing-dude h2:last-of-type,
+footer .amazing-dude p:first-of-type {
+  margin-bottom: 1em;
+}
+
+footer h2 {
+  font-size: .7em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+footer .contact-me h2,
+footer .contact-me li:nth-of-type(2),
+footer .follow-me h2,
+footer .subscribe h2,
+footer .subscribe p,
+footer .sponsor h2 {
+  margin-bottom: 1em;
+}
+
+footer p,
+footer .contact-me li {
+  font-size: .5em;
+  color: rgb(145, 145, 145);
+}
+
+footer .contact-me {
+  grid-column: 2/3;
+  grid-row: 1/8;
+}
+
+/* Follow me on */
+
+footer .follow-me {
+  grid-column: 2/3;
+  grid-row: 12/20
+}
+
+
+footer .follow-me ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .6em;
+}
+
+footer ul li {
+  margin-bottom: .1em;
+}
+
+footer ul li:last-child {
+  margin-bottom: 0;
+}
+
+footer ul li a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+footer .follow-me li svg {
+  margin-right: .2em;
+}
+
+/* SUBSCRIBE */
+
+footer .subscribe {
+  grid-row: 1/12;
+  grid-column: 3/4;
+}
+
+
+footer .email-wrapper {
+  position: relative;
+}
+
+footer .email-wrapper .email {
+  width: 100%;
+  height: 4em;
+  background-color: rgb(77, 78, 82);
+  text-transform: uppercase;
+  font-size: .5em;
+  padding: 0 .5em;
+  color: white;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: none;
+  outline: none;
+}
+
+footer .email-wrapper .email::placeholder {
+  color: #919191;
+}
+
+footer .email-wrapper button {
+  position: absolute;
+  top: .7em;
+  right: .7em;
+  transform: translateY(-50%);
+  width: .7em;
+  height: .7em;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+}
+
+/* SPONSOR */
+
+
+footer .sponsor {
+  grid-column: 3/4;
+  grid-row: 15/23;
+}
+
+footer .sponsor-icon {
+  width: 5em;
+  height: 5em;
+  border: 0.03em solid white;
+  color: white;
+  text-transform: uppercase;
+  font-size: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .sponsors {
+  display: flex;
+  gap: .5em;
+}
+
+
+@media all and (max-width: 1024px) {
+  :root {
+    --font-size: calc(0.5em + 1.5vw);
+  }
+
+  body {
+    grid-template-rows: 20em 1fr 30em;
+  }
+
+  header {
+    grid-template-columns: 2.6em 10em 10em 1.3em;
+  }
+
+  header .description {
+    grid-row: 8/13;
+  }
+
+  header .description h1 {
+    font-size: 1.5em;
+  }
+
+  header .description h2 {
+    font-size: 1.3em;
+  }
+
+  main {
+    grid-template-rows: repeat(5, 15em) 20em repeat(2, 15em);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dark-blue,
+  .dark-grey {
+    display: none;
+  }
+
+  main .snowboarder,
+  main .sed_itunes,
+  main .spotify,
+  main .instagram {
+    grid-column: span 2;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+
+  main .promo {
+    display: flex;
+    grid-column: span 1;
+    height: 20em;
+  }
+
+
+
+  main .promo .promo-card {
+    width: 100%;
+  }
+
+  main .promo p {
+    font-size: .8em;
+  }
+
+  main .promo .promo-card .promo-call button {
+    font-size: .8em;
+  }
+
+  footer .container {
+    grid-template-columns: 10em 10em;
+    grid-template-rows: repeat(32, .6em);
+  }
+
+  footer .amazing-dude {
+    grid-row: 1/24;
+  }
+
+  footer .sponsor {
+    grid-column: 1/2;
+    grid-row: 28/35;
+  }
+
+  footer .subscribe {
+    grid-column: 2/3;
+    grid-row: 21/35;
+  }
+
+  footer p {
+    font-size: .6em;
+  }
+
+  footer li {
+    font-size: 1em;
+  }
+
+}
+
+@media all and (max-width: 768px) {
+
+  :root {
+    --font-size: calc(0.5em + 2vw);
+  }
+
+  body {
+    grid-template-rows: 18em 1fr 40em;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 2.6em 8em 8em 1.3em;
+  }
+
+  header .description h1,
+  header .description h2 {
+    font-size: 1em;
+  }
+
+  header .description p {
+    font-size: .7em;
+  }
+
+  header .description {
+    grid-row: 7/ 12;
+  }
+
+  main {
+    grid-template-rows: auto-fill;
+    grid-template-columns: initial;
+  }
+
+  main .snowboarder,
+  main .sed_itunes,
+  main .spotify,
+  main .instagram {
+    grid-column: span 1;
+  }
+
+  main .promo,
+  main .spotify,
+  main .itunes {
+    height: 15em;
+  }
+
+  main .promo .promo-card {
+    padding-left: 4em;
+  }
+
+
+
+  footer .container {
+    grid-template-columns: 20em;
+    grid-template-rows: repeat(53, .6em);
+  }
+
+  footer .amazing-dude {
+    grid-row: 1/15;
+  }
+
+  footer .contact-me {
+    grid-column: 1/2;
+    grid-row: 17/24;
+  }
+
+  footer .follow-me {
+    grid-column: 1/2;
+    grid-row: 26/34;
+  }
+
+  footer .sponsor {
+    grid-column: 1/2;
+    grid-row: 35/42;
+  }
+
+  footer .subscribe {
+    grid-column: 1/2;
+    grid-row: 44/55;
+  }
+
+}

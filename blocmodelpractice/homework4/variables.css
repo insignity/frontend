@@ -1,0 +1,12 @@
+:root {
+  --bg-color: #cccccc;
+  --color: black;
+  --px: 1em;
+  --mb: 1em;
+  --mr: 1em;
+  --mt: 1em;
+  --mx: 1em;
+  --my: 1em;
+}
+
+/* 1vw = ширина:100 */

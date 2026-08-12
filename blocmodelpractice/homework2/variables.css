@@ -1,0 +1,15 @@
+:root {
+  --hf-bg-color: rgb(178, 194, 194);
+  --hf-color: #196785;
+  --main-bg-color: #C9C9C9;
+  --main-color: #787878;
+  --aside-bg-color: #ADADAD;
+  --aside-color: #181818;
+  --px: 1em;
+  --mx: 1em;
+  --mb: 1em;
+  --mr: 1em;
+  --mt: 1em;
+}
+
+/* 1vw = ширина:100 */

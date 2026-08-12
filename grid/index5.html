@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    section {
+      display: grid;
+      /* лучше делать с repeat */
+      grid-template-rows: repeat(3, 100px);
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px 20px;
+    }
+
+    article {
+      background: gold;
+    }
+
+    article:first-of-type {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    article:last-of-type {
+      grid-row: 3/4;
+
+      /* span 2 объединение на 2 колонки  */
+      grid-column: 2/ span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article>1</article>
+    <article>2</article>
+  </section>
+</body>
+
+</html>

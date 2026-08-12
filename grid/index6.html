@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    form {
+      padding: 10px;
+      border: 1px solid black;
+      display: grid;
+
+      /* именованные колонки  */
+      /* название ширина название ширина */
+      grid-template-columns: [labels] auto [elem] 1fr;
+
+      grid-template-rows: repeat(50px, 4);
+      grid-gap: 10px 20px;
+      grid-template-areas:
+        "labelName name"
+        "labelEmail email"
+        "labelComments comments"
+        "submit submit";
+    }
+
+
+
+    /* 
+    меняет места
+    label {
+      grid-column: elem;
+    }
+
+    input,
+    textarea {
+      grid-column: labels;
+    } */
+
+    label {
+      grid-column: labels;
+    }
+
+    input,
+    textarea {
+      grid-column: elem;
+    }
+
+    input[type=submit] {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="contact_form" action="#" method="post" name="contact_form">
+    <label class="labelName" for="name">asdfkajsdflksajdfl;klksjd;lfksj</label>
+    <input class="name" type="text" name="name" id="name">
+    <label class="labelEmail" for="email">Email</label>
+    <input class="email" type="email" name="email" id="email">
+    <label class="labelComments" for="comments">Comments</label>
+    <textarea class="comments" id="comments" name="comments"></textarea>
+    <input class="submit" type="submit">
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <fieldset>
+    <legend>Вход на сайт</legend>
+    <!-- if method post enctype is by default xwwwformurlencoded -->
+    <form action="./validator.js" method="post" name="user_login" autocomplete="on">
+      <ul type="none">
+        <li>
+          <label for="login">Логин:</label>
+          <input type="text" name="login" id="login" autofocus pattern="[a-z0-9.%+\-]{4,20}">
+        </li>
+        <li style="padding-top: 20px;">
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" autocomplete="off"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        </li>
+        <li style="padding-top: 20px;">
+          <button type="submit">Вход</button>
+        </li>
+      </ul>
+    </form>
+  </fieldset>
+
+
+
+
+  <form action="./validator.js" method="post" autocomplete="on" name="user_register">
+    <table>
+
+      <tr>
+        <td colspan="2" align="center">
+          <p>Форма регистрации</p>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" width="200px">Имя</td>
+        <td colspan="2" width="300px">
+          <input type="text" name="user_name" autofocus required pattern="[A-Za-z]+">
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          <!-- label instead of p -->
+          <p>e-mail</p>
+        </td>
+        <td colspan="2" width="300px">
+          <input type="email" name="user_email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          <p>Пароль</p>
+        </td>
+        <td>
+          <input type="password" name="user_password" autocomplete="off" required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          <p>Повтор пароля</p>
+        </td>
+        <td colspan="2">
+          <input type="password" name="user_password_confirmation" autocomplete="off" required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          <p>Пол</p>
+        </td>
+        <td colspan="2">
+          <input type="radio" name="sex" id="male" value="male"><label for="male">мужской</label>
+          <input type="radio" name="sex" id="female" value="female"><label for="female">женский</label>
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          <p>Увлечения</p>
+        </td>
+        <td colspan="2">
+          <select name="user_hobbies" id="hobby" multiple>
+            <!-- value in english -->
+            <option value="комьютеры">компьютеры</option>
+            <option value="спорт">спорт</option>
+            <option value="игры">игры</option>
+            <option value="животные">животные</option>
+            <option value="автомобили">автомобили</option>
+            <option value="клубы">клубы</option>
+            <option value="музыка">музыка</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" style="padding-bottom: 35px;">
+          <p>Несколько слов о себе</p>
+        </td>
+        <td><textarea name="about" id="about" cols="35" rows="3"></textarea></td>
+
+      </tr>
+      <tr>
+        <td></td>
+        <td align="right" width="300" style="padding-top: 10px;">
+          <button type="submit">Отправить</button>
+          <button type="reset">Очистить</button>
+        </td>
+      </tr>
+    </table>
+
+  </form>
+  <hr>
+  <form action="./validator.js" method="post" autocomplete="on" name="fantastic_club_user_registration">
+    <legend>
+      <h2>
+        Регистрационна страница Клуба любителей фантастики
+      </h2>
+    </legend>
+    <p>Заполнив анкету, вы сможете пользоваться нашей электронной библиотекой.</p>
+    <ul type="none">
+      <li>
+        <label for="user_name">Введите регистрационное имя:</label>
+        <input type="text" name="user_name" autofocus required pattern="[A-Za-z]+" maxlength="20">
+      </li>
+      <li>
+        <label for="user_password">Введите пароль:</label>
+        <input type="password" name="user_password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+      </li>
+      <li>
+        <label for="user_password_confirmation">Подтвердите пароль:</label>
+        <input type="password" name="user_password_confirmation" required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+      </li>
+      <li>
+        <span>Ваш возраст:</span>
+        <input type="radio" name="user_age" id="under20" value="under20"><label for="under20">До 20</label>
+        <input type="radio" name="user_age" id="20-30" value="20-30"><label for="20-30">20-30</label>
+        <input type="radio" name="user_age" id="30-50" value="30-50"><label for="30-50">30-50</label>
+        <input type="radio" name="user_age" id="above50" value="above50"><label for="above50">старше 50</label>
+      </li>
+      <li>
+        <span>На каких языках вы читаете:</span>
+        <input type="checkbox" name="user_lang" id="rus" value="rus"><label for="rus">русский</label>
+        <input type="checkbox" name="user_lang" id="eng" value="eng"><label for="eng">английский</label>
+        <input type="checkbox" name="user_lang" id="fr" value="fr"><label for="fr">французкий</label>
+        <input type="checkbox" name="user_lang" id="de" value="de"><label for="de">немецкий</label>
+      </li>
+
+      <li>
+        <p>Какой формат данных является для Вас предпочтительным</p>
+        <p>
+          <select name="data_format" id="data_format">
+            <option value="html">HTML</option>
+            <option value="text">Plain text</option>
+          </select>
+        </p>
+      </li>
+
+      <li>
+        <p>Ваши любимые авторы:</p>
+        <textarea name="autors" id="autors"></textarea>
+      </li>
+
+      <li>
+        <input type="submit" value="OK">
+        <input type="reset" value="Отменить">
+      </li>
+
+  </form>
+
+
+
+
+</body>
+
+</html>
