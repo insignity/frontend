@@ -61,6 +61,10 @@ body {
   grid-column: 2/3;
   padding-top: 3.5em;
   padding-right: 12em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 3em;
 }
 
 
@@ -68,7 +72,6 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3em;
 }
 
 .header-top {
@@ -80,17 +83,17 @@ header {
   margin-bottom: 3em;
 }
 
-.header-top .logo{
+.header-top .logo {
   width: 50%;
   display: flex;
   justify-content: center;
 }
 
-.header-top .logo .logo__link{
+.header-top .logo .logo__link {
   margin: 0;
 }
 
-.header-nav{
+.header-nav {
   width: 50%;
   display: flex;
   justify-content: center;
@@ -140,7 +143,7 @@ header {
 
 /* #region Promo Wrapper */
 
-.promo .promo-wrapper{
+.promo .promo-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -276,14 +279,14 @@ footer {
     column-gap: .8em;
   }
 
-  .promo .container{
+  .promo .container {
     padding-top: 3em;
     padding-right: 2em;
   }
 
   /*#region Promo Header */
 
-  .promo header .header-top{
+  .promo header .header-top {
     margin-bottom: 1.2em;
   }
 
@@ -305,17 +308,20 @@ footer {
 
   /*#region Promo Dream */
 
-  .promo .promo-title {
-    margin: 0 10px 0 151px;
+  .promo .promo-wrapper {
+    row-gap: 1em;
   }
 
+  .promo .promo-wrapper .promo-title {
+    font-size: 1.5em;
+    margin-right: .5em;
+  }
 
-  .promo h1 {
-    font-size: 24px;
+  .promo .promo-wrapper .promo-img {
+    height: 20em;
   }
 
   .promo button {
-    margin-top: 18px;
     padding: 13px 0;
   }
 
@@ -357,23 +363,24 @@ footer {
 
 @media all and (max-width: 768px) {
 
-  body {
-    grid-template-rows: 700px 1fr 573px;
-  }
 
   .promo {
-    grid-template-columns: 420px 230px;
-    margin: 0 24px;
+    grid-template-columns: 1fr;
+    padding: 3em 1.5em 0 6em;
+    gap: 0;
   }
 
   .promo .promo-bg {
     display: none;
   }
 
-  .promo .promo-title {
+  .promo .container {
     grid-column: 1/2;
-    grid-row: 2/3;
-    width: 100%;
+    padding: 0;
+
+  }
+
+  .promo .promo-title {
     align-items: flex-start;
     margin: 0;
   }
