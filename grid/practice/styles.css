@@ -243,14 +243,14 @@ footer {
 footer .container {
   display: grid;
   grid-template-columns: 9.4em 7.6em 12.6em;
-  grid-template-rows: repeat(auto-fill, minmax(.6em, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(1.2em, 1fr));
   gap: 0 4em;
 }
 
 
 footer .amazing-dude {
   grid-column: 1/2;
-  grid-row: 1/ 19;
+  grid-row: 1/ 10;
 }
 
 footer .amazing-dude h2:last-of-type,
@@ -282,14 +282,14 @@ footer .contact-me li {
 
 footer .contact-me {
   grid-column: 2/3;
-  grid-row: 1/8;
+  grid-row: 1/5;
 }
 
 /* Follow me on */
 
 footer .follow-me {
   grid-column: 2/3;
-  grid-row: 12/20
+  grid-row: 6/10
 }
 
 
@@ -325,7 +325,7 @@ footer .follow-me li svg {
 /* SUBSCRIBE */
 
 footer .subscribe {
-  grid-row: 1/12;
+  grid-row: 1/7;
   grid-column: 3/4;
 }
 
@@ -372,7 +372,7 @@ footer .email-wrapper button {
 
 footer .sponsor {
   grid-column: 3/4;
-  grid-row: 15/23;
+  grid-row: 7/11;
 }
 
 footer .sponsor-icon {
@@ -471,6 +471,14 @@ footer .sponsors {
     grid-row: 28/35;
   }
 
+  footer .contact-me{
+    grid-row: 1/8;
+  }
+
+  footer .follow-me{
+    grid-row: 10/18;
+  }
+
   footer .subscribe {
     grid-column: 2/3;
     grid-row: 21/35;
@@ -549,22 +557,22 @@ footer .sponsors {
 
   footer .contact-me {
     grid-column: 1/2;
-    grid-row: 17/24;
+    grid-row: 18/25;
   }
 
   footer .follow-me {
     grid-column: 1/2;
-    grid-row: 26/34;
+    grid-row: 28/36;
   }
 
   footer .sponsor {
     grid-column: 1/2;
-    grid-row: 35/42;
+    grid-row: 39/46;
   }
 
   footer .subscribe {
     grid-column: 1/2;
-    grid-row: 44/55;
+    grid-row: 49/55;
   }
 
 }
