@@ -109,11 +109,11 @@ header {
 .promo header .nav-list {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
 .promo header .nav-list a {
-  font-size: 1.4rem;
+  font-size: calc(20/16rem);
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -126,9 +126,6 @@ header {
   justify-content: space-between;
 }
 
-.promo header .header-search-cart .header-search {
-  margin-right: 15px;
-}
 
 /* #endregion */
 
@@ -143,14 +140,12 @@ header {
 }
 
 .promo .promo-wrapper .promo-title {
-  width: calc((100% / 14) * 9 - .6em);
-
+  max-width: 40%;
   align-self: flex-end;
   font-style: italic;
   font-weight: 400;
   font-size: 2em;
   text-transform: uppercase;
-  margin-right: .6em;
 }
 
 .promo .promo-wrapper .promo-img {
@@ -160,12 +155,14 @@ header {
   background-repeat: no-repeat;
   box-shadow: .3em .3em .6em rgba(0, 0, 0, .25);
   height: 29em;
-  width: calc((100% / 14) * 5);
+  width: 20%;
+  flex: auto;
 }
 
 .promo .promo-wrapper button {
   display: flex;
-  width: calc((100% / 14) * 5);
+  width: 20%;
+  flex: auto;
   padding: 18px 0;
 }
 
@@ -201,8 +198,8 @@ main .create-or-buy p {
 main .create-or-buy .store-workshop {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-content: flex-start;
+  flex: auto;
 }
 
 main .our-store {
@@ -269,7 +266,9 @@ footer {
 @media all and (max-width: 1200px) {
   .promo {
     column-gap: .8em;
+    max-height: 633px;
   }
+
 
   .promo .container {
     padding-top: 3em;
@@ -287,8 +286,8 @@ footer {
     height: 6em;
   }
 
-  .promo header .nav-list li {
-    margin-right: 30px;
+  .promo header .nav-list {
+    gap: 1.8rem;
   }
 
   .promo header .nav-list li:last-of-type {
@@ -307,14 +306,18 @@ footer {
   .promo .promo-wrapper .promo-title {
     font-size: 1.5em;
     margin-right: .5em;
+    padding-left: 350px;
   }
+
 
   .promo .promo-wrapper .promo-img {
     height: 20em;
+    width: calc((231 * 100% / 1140));
   }
 
-  .promo button {
+  .promo .promo-wrapper button {
     padding: 13px 0;
+    width: calc((231 * 100% / 1140));
   }
 
   /* #endregion */
@@ -322,6 +325,17 @@ footer {
   /* main */
   main .create-or-buy {
     max-width: 1140px;
+  }
+
+
+  main .create-or-buy .store-workshop {
+    flex-wrap: wrap;
+
+  }
+
+  main .our-store,
+  main .our-workshop {
+    width: 100%;
   }
 
   main .create-or-buy .our-store {
@@ -399,6 +413,11 @@ footer {
     max-width: 530px;
   }
 
+  main .our-store,
+  main .our-workshop {
+    width: 100%;
+
+  }
 }
 
 
@@ -441,11 +460,11 @@ footer {
     margin: 0;
   }
 
-  .promo header .logo-nav .top-nav {
+  .promo header .header-nav {
     display: none;
   }
 
-  .promo header .header-search-cart {
+  .promo header .header-icons {
     justify-content: flex-end;
   }
 
