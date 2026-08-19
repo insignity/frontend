@@ -139,6 +139,12 @@ header {
   row-gap: 3em;
 }
 
+.promo .promo-wrapper .promo-wrapper-top{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 .promo .promo-wrapper .promo-title {
   max-width: 40%;
   align-self: flex-end;
@@ -156,13 +162,12 @@ header {
   box-shadow: .3em .3em .6em rgba(0, 0, 0, .25);
   height: 29em;
   width: 20%;
-  flex: auto;
 }
 
 .promo .promo-wrapper button {
-  display: flex;
-  width: 20%;
+
   flex: auto;
+  width: 20%;
   padding: 18px 0;
 }
 
@@ -306,7 +311,7 @@ footer {
   .promo .promo-wrapper .promo-title {
     font-size: 1.5em;
     margin-right: .5em;
-    padding-left: 350px;
+
   }
 
 
