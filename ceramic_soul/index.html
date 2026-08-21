@@ -87,15 +87,34 @@
             method="get"
             name="get_in_touch_form"
           >
-            <label for="name"></label>
-            <input type="text" name="name" id="name" />
-            <label for="email"></label>
-            <input type="email" name="email" id="email" />
-            <label for="question"></label>
-            <textarea name="question" id="question"></textarea>
-            <input type="checkbox" name="terms" id="terms" />
-            <label for="terms">I agree with the <span>terms</span></label>
-            <button class="submit" type="submit">Send request</button>
+            <ul class="form-list">
+              <li class="name-and-email">
+                <div class="labeled-name">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+                <div class="labeled-email">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" required />
+                </div>
+              </li>
+              <li>
+                <label for="question">Your question</label>
+                <textarea name="question" id="question" required></textarea>
+              </li>
+              <li>
+                <input type="checkbox" name="terms" id="terms" required />
+                <label for="terms" class="terms-label"
+                  >I agree with the <a class="terms-link">terms</a></label
+                >
+              </li>
+              <li>
+                <button class="submit outlined-button" type="submit">
+                  Send request
+                </button>
+              </li>
+            </ul>
+            <figure></figure>
           </form>
         </section>
         <section class="checkout">
