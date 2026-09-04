@@ -3,8 +3,10 @@
   --color: #ffffff;
   --bg-color: #fafafa;
   --dark-color: #232323;
+  --light-color: #fafafa;
   --error-color: #DB0C35;
   --ceramic-color: #C69978;
+  --purple-color: #A22DC6;
   --px: 1em;
   --font-size: calc(0.5em + 1vw);
 }

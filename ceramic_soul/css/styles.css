@@ -80,7 +80,7 @@ input:invalid{
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: calc(900rem/16) 1fr calc(425rem/16);
   background-color: var(--bg-color);
 }
 
@@ -216,13 +216,15 @@ header {
 
 /* #endregion */
 
+/* #region main */
+
 /* #region Crete or Buy */
 main .container{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   row-gap: calc(100rem/16);
-  padding: calc(60rem/16) 0;
+  padding: calc(60rem/16) 2rem;
   justify-items: center;
 }
 
@@ -296,10 +298,13 @@ main .get-in-touch{
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
   width: 100%;
+  background: url("../src/images/vase.png") center/auto no-repeat;
+  background-position: 100% 100%;
+
 }
 
 main .get-in-touch h2{
-  grid-column: span 3;
+  grid-column: 1 / 3;
 }
 
 main .get-in-touch>figure{
@@ -319,6 +324,7 @@ main .get-in-touch .form-list{
   display: flex;
   flex-direction: column;
   row-gap: 1.25rem;
+  position: relative;
 }
 
 main .form-list label{
@@ -328,6 +334,10 @@ main .form-list label{
 
 main .form-list .terms-label{
   display: initial;
+}
+
+main .form-list .terms-link{
+  color: var(--purple-color);
 }
 
 main .form-list .name-and-email{
@@ -341,22 +351,151 @@ main .form-list button{
   padding: calc(12rem/16) calc(55rem/16);
 }
 
-main .form-list > figure{
+main .get-in-touch .form-list figure{
+  position: absolute;
+  background: url("../src/imaages/vase.png") center/cover no-repeat;
+  height: 85px;
+  width: 85px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
 
+/* #endregion Get in touch */
+
+/* #endregion main */
+
+/* #region footer */
+
+footer {
+  background-color: #232323;
+  color: var(--light-color);
+}
+
+footer .container{
+  height: 100%;
+  padding: calc(80rem/16) 2rem calc(50rem/16) 2rem;
+  display: grid;
+  grid-template-columns: 18rem 26rem 6rem;
+  grid-template-rows: repeat(auto-fill, minmax(2.5rem, 1fr));
+  justify-content: space-between;
+}
+
+footer h2{
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* #region newsletter */
+
+footer .newsletter{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 1/9;
+  row-gap: 2.5rem;
+}
+
+footer .newsletter .footer-form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+
+footer .newsletter input{
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--light-color);
+}
+
+footer .newsletter .footer-terms label, footer .newsletter input{
+  color: var(--light-color);
+}
+footer .newsletter .footer-terms a{
+  color: var(--purple-color);
+}
+
+footer .newsletter button{
+  background: var(--dark-color);
+  color: var(--light-color);
+  border-color: var(--light-color);
+  align-self: flex-start;
+  padding: calc(12rem/16) calc(18rem/16);
+}
+
+footer .newsletter button:hover{
+  background: var(--light-color);
+  color: var(--dark-color);
+  border-color: var(--dark-color);
 }
 
 /* #endregion */
 
-footer {
-  background-color: #232323;
+/* #region footer nav */
+
+footer .footer-nav{
+  display: flex;
+  flex-direction: row;
+  column-gap: calc(66rem/16);
+  grid-column: 2/3;
+  grid-row: 1/4;
+
 }
 
+footer .discover, footer .shopping, footer .information{
+  margin: 0 auto;
+}
 
+footer .footer-nav h2, footer .footer-nav a{
+  color: var(--light-color);
+}
 
+footer .footer-nav a:hover{
+  color: var(--purple-color);
+}
+
+footer .footer-nav h2{
+  margin-bottom: 2.5rem;
+}
+
+footer .footer-nav .discover-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+/* #endregion */
+
+footer .follow-us{
+  grid-column: 3/4;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+footer .follow-us .social-media{
+  display: flex;
+  column-gap: 0.6rem;
+}
+
+footer .copyright{
+  grid-column: span 3;
+  grid-row: 9/10;
+  text-align: center;
+}
+/* #endregion footer */
 
 
 
 @media all and (max-width: 1200px) {
+  body{
+    grid-template-rows: calc(633rem/16) 1fr calc(425rem/16);
+  }
+
   .promo {
     column-gap: .8em;
     max-height: 633px;
@@ -436,6 +575,11 @@ main .get-in-touch figure{
   
   /* #endregion */
 
+  /* #region footer */
+  footer .container{
+    padding: calc(50rem/16) calc(30rem/16);
+  }
+  /* #endregion */
 }
 
 
@@ -445,6 +589,10 @@ main .get-in-touch figure{
 
 
 @media all and (max-width: 768px) {
+  body{
+    grid-template-rows: calc(700rem/16) 1fr calc(765rem/16);
+  }
+
   .promo {
     grid-template-columns: 1fr;
     padding: 3em 1.5em 0 6em;
@@ -494,6 +642,51 @@ main .get-in-touch figure{
     margin-bottom: 0;
     font-size: 2.25rem;
   }
+
+  main .get-in-touch>figure{
+    display: none;
+  }
+
+  main .get-in-touch{
+    grid-template-columns: 1fr;
+  }
+
+
+  main .form-list .name-and-email{
+  flex-direction: column;
+}
+
+
+  main .get-in-touch h2{
+  grid-column: initial;
+}
+
+  main .get-in-touch form{
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+/* footer  */
+  footer .container{
+    grid-template-columns: 26rem 6rem;
+    padding: calc(50rem/16) 1.5rem;
+  }
+
+  footer .container .footer-nav{
+    grid-column: 1/2;
+    grid-row: 9/13;
+  }
+
+  footer .container .follow-us{
+    grid-column: 2/3;
+    grid-row: 9/13;
+  }
+
+  footer .copyright{
+    grid-column: span 2;
+    grid-row: 14/15;
+  }
+
 }
 
 
@@ -502,6 +695,11 @@ main .get-in-touch figure{
 
 
 @media all and (max-width: 360px) {
+
+
+  body{
+    grid-template-rows: calc(700rem/16) 1fr calc(814rem/16);
+  }
 
   body .promo {
     max-height: calc(693rem/16);
@@ -573,5 +771,22 @@ main .get-in-touch figure{
 
   main .create-or-buy h3{
     font-size: 1.25rem;
+  }
+
+  main .get-in-touch {
+    background: none;
+  }
+
+  main .get-in-touch>figure{
+    display: none;
+  }
+
+  main .get-in-touch 
+  input[type="text"], input[type="email"], textarea{
+    width: 100%;
+  }
+
+  footer .container{
+    padding: calc(50rem/16) calc(10rem/16);
   }
 }
