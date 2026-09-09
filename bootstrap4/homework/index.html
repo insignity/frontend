@@ -1,64 +1,72 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/bootstrap.css" />
-    <title>Document</title>
-    <style>
-      .block {
-        background: grey;
-        border: 1px solid black;
-      }
 
-      .card-body {
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <title>Document</title>
+  <style>
+    .block {
+      background: grey;
+      border: 1px solid black;
+    }
 
-      .nav-link {
-        padding-bottom: 0;
-        color: darkblue;
-      }
-    </style>
-  </head>
+    .card-body {
+      padding: 0;
+    }
 
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <header class="col block">
-          <h2>Header</h2>
-        </header>
-      </div>
-      <div class="row">
-        <aside class="col-md-4 block">
-          <div class="row">
+    .nav-link {
+      padding-bottom: 0;
+      color: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="col block">
+        <h2>Header</h2>
+      </header>
+    </div>
+    <div class="row">
+      <aside class="col-md-4 block">
+        <div class="row">
+          <div class="col">
             <h2>Sidebar</h2>
           </div>
-          <div class="row">
-            <nav class="nav flex-column">
-              <a class="nav-link active" href="#">Item 1</a>
-              <a class="nav-link" href="#">Item 2</a>
-              <a class="nav-link" href="#">Item 3</a>
-              <a class="nav-link" href="#">Item 4</a>
-              <a class="nav-link" href="#">Item 5</a>
-            </nav>
-          </div>
-        </aside>
-        <main class="col-8 content block">
-          <div class="row">
-            <div class="col">
-              <h2>Content</h2>
-              <div class="row">
+        </div>
+        <div class="row">
+          <nav class="nav flex-column">
+            <a class="nav-link active" href="#">Item 1</a>
+            <a class="nav-link" href="#">Item 2</a>
+            <a class="nav-link" href="#">Item 3</a>
+            <a class="nav-link" href="#">Item 4</a>
+            <a class="nav-link" href="#">Item 5</a>
+          </nav>
+        </div>
+      </aside>
+      <main class="col-8 content block">
+        <div class="row">
+          <div class="col">
+            <h2>Content</h2>
+            <div class="row p-3">
+              <div class="col">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                  <div class="p-2">
-                    <div class="card">
-                      <div class="row">
-                        <h5 class="card-title">Goods 1</h5>
+                  <div class="col card">
+                    <div class="row">
+                      <div class="col px-0 ">
+                        <h5 class="card-title mb-0 my-2">Goods 1</h5>
                       </div>
-                      <div class="row">
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
                         <img src="./src/1.jpg" class="card-img-top" alt="..." />
                       </div>
-                      <div class="row">
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
                         <p class="card-text">
                           Lorem, ipsum dolor sit amet consectetur adipisicing
                           elit. Facilis excepturi facere similique maiores id.
@@ -67,73 +75,105 @@
                       </div>
                     </div>
                   </div>
-                  <div class="card-margin p-2">
-                    <div class="card">
-                      <h5 class="card-title">Goods 2</h5>
-                      <img src="./src/1.jpg" class="card-img-top" alt="..." />
-                      <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Facilis excepturi facere similique maiores id. Ex
-                        quisquam non accusamus quos libero.
-                      </p>
+                  <div class="col card">
+                    <div class="row">
+                      <div class="col px-0 ">
+                        <h5 class="card-title mb-0 my-2">Goods 1</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <img src="./src/1.jpg" class="card-img-top" alt="..." />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <p class="card-text">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Facilis excepturi facere similique maiores id.
+                          Ex quisquam non accusamus quos libero.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="card-margin p-2">
-                    <div class="card">
-                      <h5 class="card-title">Goods 3</h5>
-                      <img src="./src/1.jpg" class="card-img-top" alt="..." />
-                      <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Facilis excepturi facere similique maiores id. Ex
-                        quisquam non accusamus quos libero.
-                      </p>
+                  <div class="col card">
+                    <div class="row">
+                      <div class="col px-0 ">
+                        <h5 class="card-title mb-0 my-2">Goods 1</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <img src="./src/1.jpg" class="card-img-top" alt="..." />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <p class="card-text">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Facilis excepturi facere similique maiores id.
+                          Ex quisquam non accusamus quos libero.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="card-margin p-2">
-                    <div class="card">
-                      <h5 class="card-title">Goods 4</h5>
-                      <img src="./src/1.jpg" class="card-img-top" alt="..." />
-                      <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Facilis excepturi facere similique maiores id. Ex
-                        quisquam non accusamus quos libero.
-                      </p>
+                  <div class="col card">
+                    <div class="row">
+                      <div class="col px-0 ">
+                        <h5 class="card-title mb-0 my-2">Goods 1</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <img src="./src/1.jpg" class="card-img-top" alt="..." />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <p class="card-text">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Facilis excepturi facere similique maiores id.
+                          Ex quisquam non accusamus quos libero.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="card-margin p-2">
-                    <div class="card">
-                      <h5 class="card-title">Goods 5</h5>
-                      <img src="./src/1.jpg" class="card-img-top" alt="..." />
-                      <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Facilis excepturi facere similique maiores id. Ex
-                        quisquam non accusamus quos libero.
-                      </p>
+                  <div class="col card">
+                    <div class="row">
+                      <div class="col px-0 ">
+                        <h5 class="card-title mb-0 my-2">Goods 1</h5>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <img src="./src/1.jpg" class="card-img-top" alt="..." />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col px-0">
+                        <p class="card-text">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Facilis excepturi facere similique maiores id.
+                          Ex quisquam non accusamus quos libero.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="card-margin p-2">
-                    <div class="card">
-                      <h5 class="card-title">Goods 6</h5>
-                      <img src="./src/1.jpg" class="card-img-top" alt="..." />
-                      <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Facilis excepturi facere similique maiores id. Ex
-                        quisquam non accusamus quos libero.
-                      </p>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
           </div>
-        </main>
-      </div>
-      <div class="row">
-        <footer class="col block">
-          <h2>Footer</h2>
-        </footer>
-      </div>
+        </div>
+      </main>
     </div>
-    <script src="./js/bootstrap.js"></script>
-  </body>
+    <div class="row">
+      <footer class="col block">
+        <h2>Footer</h2>
+      </footer>
+    </div>
+  </div>
+  <script src="./js/bootstrap.js"></script>
+</body>
+
 </html>
