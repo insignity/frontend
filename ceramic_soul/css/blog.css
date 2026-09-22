@@ -81,10 +81,10 @@ input:invalid {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: calc(900rem/16) 1fr calc(425rem/16);
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-color);
+  gap: calc(100rem/16);
 }
 
 /* #endregion */
@@ -150,7 +150,100 @@ header .header-icons {
 /* #endregion */
 
 /* #region main */
-main {}
+main h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(60rem/16);
+  padding: 0 2rem;
+}
+
+main .digital-notes{
+  position: relative;
+}
+
+
+main .corner-decoration {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(200rem/16);
+  height: calc(200rem/16);
+  border-top: 1px solid var(--dark-color);
+  border-left: 1px solid var(--dark-color);
+}
+
+
+/* #region Crete or Buy */
+main .main-d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+main .create-or-buy p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+main .pottery-secrets {
+  padding: 1em;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: calc(556rem/16);
+}
+
+main .our-workshop {
+  padding: 1em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(844rem/16);
+}
+
+main .pottery-secrets h3,
+main .our-workshop h3 {
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+}
+
+
+
+main .pottery-secrets figure {
+  background: url('../src/images/store.png') center / cover no-repeat;
+  max-width: 844px;
+  height: 320px;
+}
+
+
+
+
+main .our-workshop figure {
+  background: url('../src/images/workshop.png') center / cover no-repeat;
+  height: 320px;
+}
+
+main .pottery-secrets figure,
+main .our-workshop figure {
+  margin-bottom: 30px;
+}
+
+main .our-workshop p {
+  width: 70%;
+}
+
+main .digital-notes span {
+  color: #C69978;
+}
+
+/* #endregion Create or Buy */
 
 /* #endregion */
 
@@ -161,13 +254,16 @@ footer {
   color: var(--light-color);
 }
 
-footer .container {
+footer {
   height: 100%;
-  padding: calc(80rem/16) 2rem calc(50rem/16) 2rem;
-  display: grid;
-  grid-template-columns: 18rem 26rem 6rem;
-  grid-template-rows: repeat(auto-fill, minmax(2.5rem, 1fr));
+  padding-top: calc(80rem/16);
+}
+
+footer .footer-d-flex {
+  display: flex;
   justify-content: space-between;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
 }
 
 footer h2 {
@@ -182,8 +278,6 @@ footer .newsletter {
   height: 100%;
   display: flex;
   flex-direction: column;
-  grid-column: 1/2;
-  grid-row: 1/8;
   row-gap: 2rem;
 }
 
@@ -225,14 +319,19 @@ footer .newsletter button:hover {
 
 /* #endregion */
 
+footer .footer-nav--follow {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: calc(700rem/16);
+  flex-shrink: 1;
+}
+
 /* #region footer nav */
 
 footer .footer-nav {
   display: flex;
   flex-direction: row;
   column-gap: calc(66rem/16);
-  grid-column: 2/3;
-  grid-row: 1/4;
 
 }
 
@@ -258,8 +357,6 @@ footer .footer-nav .discover-list {
 /* #endregion */
 
 footer .follow-us {
-  grid-column: 3/4;
-  grid-row: 1/3;
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
@@ -271,13 +368,11 @@ footer .follow-us .social-media {
 }
 
 footer .copyright {
-  grid-column: span 3;
-  grid-row: 9/10;
   text-align: center;
 }
 
-/* #endregion footer */
 
+/* #endregion footer */
 
 
 @media all and (max-width: 1200px) {

@@ -300,10 +300,6 @@ main .create-or-buy span {
 /* #endregion Create or Buy */
 
 /* #region Get in Touch */
-main .get-in-touch {
-  margin-bottom: 5rem;
-}
-
 main .get-in-touch-body {
   justify-content: space-between;
   width: 100%;

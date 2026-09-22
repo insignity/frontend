@@ -195,9 +195,8 @@ main .catalog {
   padding: 1.5rem;
   position: relative;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(calc(285rem/16), 1fr));
-  justify-content: start;
+  display: flex;
+  flex-wrap: wrap;
   gap: calc(35rem/16);
 }
 
