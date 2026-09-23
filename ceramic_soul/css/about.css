@@ -81,20 +81,20 @@ input:invalid {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: calc(900rem/16) 1fr calc(425rem/16);
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-color);
+  gap: calc(100rem/16);
 }
 
 /* #endregion */
 
 /* #region header */
 header {
+  padding-top: calc(50rem/16);
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 3rem;
 }
 
 /* header top */
@@ -150,7 +150,91 @@ header .header-icons {
 /* #endregion */
 
 /* #region main */
-main {}
+
+
+main h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  grid-column: span 2;
+}
+
+main .create-or-buy p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+main .main-d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+/* #region Get in Touch */
+main .get-in-touch-body {
+  justify-content: space-between;
+  width: 100%;
+  background: url("../src/images/vase.png") center/auto no-repeat;
+  background-position: 100% 100%;
+}
+
+main .get-in-touch .get-in-touch-img {
+  padding: 1em;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: calc(556rem/16);
+  margin-right: 2.5rem;
+}
+
+main .get-in-touch form {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+main .get-in-touch .form-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  position: relative;
+}
+
+main .form-list label {
+  display: block;
+  line-height: calc(28rem/16);
+}
+
+main .form-list .terms-label {
+  display: initial;
+}
+
+main .form-list .terms-link {
+  color: var(--purple-color);
+}
+
+main .form-list .name-and-email {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  row-gap: 1.25rem;
+}
+
+main .form-list button {
+  padding: calc(12rem/16) calc(55rem/16);
+}
+
+main .get-in-touch .form-list figure {
+  position: absolute;
+  background: url("../src/images/vase.png") center/cover no-repeat;
+  height: 85px;
+  width: 85px;
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+/* #endregion Get in touch */
+
 
 /* #endregion */
 
@@ -161,13 +245,16 @@ footer {
   color: var(--light-color);
 }
 
-footer .container {
+footer {
   height: 100%;
-  padding: calc(80rem/16) 2rem calc(50rem/16) 2rem;
-  display: grid;
-  grid-template-columns: 18rem 26rem 6rem;
-  grid-template-rows: repeat(auto-fill, minmax(2.5rem, 1fr));
+  padding-top: calc(80rem/16);
+}
+
+footer .footer-d-flex {
+  display: flex;
   justify-content: space-between;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
 }
 
 footer h2 {
@@ -182,8 +269,6 @@ footer .newsletter {
   height: 100%;
   display: flex;
   flex-direction: column;
-  grid-column: 1/2;
-  grid-row: 1/8;
   row-gap: 2rem;
 }
 
@@ -225,14 +310,19 @@ footer .newsletter button:hover {
 
 /* #endregion */
 
+footer .footer-nav--follow {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: calc(700rem/16);
+  flex-shrink: 1;
+}
+
 /* #region footer nav */
 
 footer .footer-nav {
   display: flex;
   flex-direction: row;
   column-gap: calc(66rem/16);
-  grid-column: 2/3;
-  grid-row: 1/4;
 
 }
 
@@ -258,8 +348,6 @@ footer .footer-nav .discover-list {
 /* #endregion */
 
 footer .follow-us {
-  grid-column: 3/4;
-  grid-row: 1/3;
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
@@ -271,22 +359,25 @@ footer .follow-us .social-media {
 }
 
 footer .copyright {
-  grid-column: span 3;
-  grid-row: 9/10;
   text-align: center;
 }
+
 
 /* #endregion footer */
 
 
 
 @media all and (max-width: 1200px) {
+  .container {
+    padding: 0 2rem;
+  }
+
   body {
-    grid-template-rows: calc(633rem/16) 1fr calc(425rem/16);
+    gap: calc(60rem / 16);
   }
 
 
-  /*#region Promo Header */
+  /*#region Header */
 
   header .header-top {
     margin-bottom: 1.2em;
@@ -308,9 +399,35 @@ footer .copyright {
   /*#endregion */
 
 
+  /* #region main */
+
+  /* #region get in touch*/
+  main .get-in-touch {
+    margin-bottom: 3.5rem;
+  }
+
+  main .get-in-touch {
+    column-gap: 2.5rem;
+  }
+
+  main .get-in-touch figure {
+    width: 100%;
+  }
+
+  /* #endregion */
+
+  /* #endregion */
+
   /* #region footer */
-  footer .container {
+  footer {
     padding: calc(50rem/16) calc(30rem/16);
+  }
+
+  footer .footer-d-flex {
+    padding: 0;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 2.5rem;
   }
 
   /* #endregion */
@@ -318,50 +435,57 @@ footer .copyright {
 
 
 
-
-
-
-
 @media all and (max-width: 768px) {
-  body {
-    grid-template-rows: calc(700rem/16) 1fr calc(765rem/16);
+  .container {
+    padding: 0 .6rem;
   }
 
-  /* footer  */
-  footer .container {
-    grid-template-columns: 26rem 6rem;
+
+  /* #region main */
+
+
+  main .main-d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* #region get in touch*/
+
+  main .get-in-touch .title {
+    margin-bottom: 3rem;
+  }
+
+  main h2 {
+    margin-bottom: 0;
+    font-size: 2.25rem;
+  }
+
+  main .get-in-touch .get-in-touch-img {
+    display: none;
+  }
+
+  /* #endregion */
+
+  /* #endregion */
+
+
+  /* #region footer  */
+  footer {
     padding: calc(50rem/16) 1.5rem;
   }
 
-  footer .container .footer-nav {
-    grid-column: 1/2;
-    grid-row: 9/13;
+  footer .footer-nav--follow {
+    flex-wrap: wrap;
+    gap: 2.5rem;
   }
 
-  footer .container .follow-us {
-    grid-column: 2/3;
-    grid-row: 9/13;
-  }
-
-  footer .copyright {
-    grid-column: span 2;
-    grid-row: 14/15;
-  }
+  /* #endregion */
 
 }
 
 
 
-
-
-
 @media all and (max-width: 360px) {
-
-
-  body {
-    grid-template-rows: calc(700rem/16) 1fr calc(814rem/16);
-  }
-
 
   /* #region Header */
   header {
@@ -382,40 +506,51 @@ footer .copyright {
     display: none;
   }
 
+  main h2 {
+    font-size: 2rem;
+  }
 
+  /* #endregion */
 
+  /* #region main */
 
+  /* #region get in touch */
+  main .get-in-touch {
+    background: none;
+  }
+
+  main .get-in-touch .title {
+    margin-bottom: 3.5rem;
+  }
+
+  main .get-in-touch-body {
+    background: none;
+  }
+
+  main .get-in-touch .labeled-name,
+  main .get-in-touch .labeled-email,
+  textarea {
+    width: 100%;
+  }
+
+  /* #endregion */
 
   /* #endregion */
 
   /*  #region footer */
 
-  footer .container {
-    grid-template-columns: 1fr;
+  footer {
     padding: calc(50rem/16) calc(10rem/16);
   }
 
 
-  footer .container .footer-nav {
+  footer .footer-nav {
     flex-wrap: wrap;
     row-gap: 2em;
-    grid-column: 1 / 2;
-    grid-row: 8 / 13;
     align-content: start;
   }
 
-
-
-  footer .container .follow-us {
-    grid-column: 1 / 2;
-    grid-row: 14/16;
-  }
-
-  footer .copyright {
-    grid-column: 1 / 2;
-    grid-row: 17/18;
-  }
-
   /* #endregion */
+
 
 }

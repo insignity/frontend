@@ -367,8 +367,7 @@ footer .copyright {
   }
 
   body {
-    grid-template-rows: calc(194rem/16) 1fr calc(425rem/16);
-    row-gap: calc(60rem / 16);
+    gap: calc(60rem / 16);
   }
 
 
@@ -416,10 +415,6 @@ footer .copyright {
 
 
 @media all and (max-width: 768px) {
-  body {
-    grid-template-rows: calc(144rem/16) 1fr calc(765rem/16);
-  }
-
   .container {
     padding: 0 .6rem;
   }
@@ -444,12 +439,6 @@ footer .copyright {
 
 
 @media all and (max-width: 360px) {
-
-
-  body {
-    grid-template-rows: calc(150rem/16) 1fr calc(814rem/16);
-  }
-
 
   /* #region Header */
   header {

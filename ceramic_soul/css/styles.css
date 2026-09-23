@@ -221,6 +221,12 @@ header {
 
 /* #region main */
 
+
+main .main-d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
 /* #region Crete or Buy */
 main .create-or-buy {
   margin-bottom: 6rem;
@@ -235,10 +241,6 @@ main h2 {
   grid-column: span 2;
 }
 
-main .main-d-flex {
-  display: flex;
-  flex-direction: row;
-}
 
 main .create-or-buy p {
   font-size: 20px;
@@ -353,7 +355,7 @@ main .form-list button {
 
 main .get-in-touch .form-list figure {
   position: absolute;
-  background: url("../src/imaages/vase.png") center/cover no-repeat;
+  background: url("../src/images/vase.png") center/cover no-repeat;
   height: 85px;
   width: 85px;
   bottom: 0;
@@ -502,7 +504,6 @@ footer .copyright {
   .promo {
     column-gap: .8em;
     max-height: 633px;
-
   }
 
   .promo .container {
@@ -596,12 +597,6 @@ footer .copyright {
   /* #endregion */
 }
 
-
-
-
-
-
-
 @media all and (max-width: 768px) {
 
   /* #region promo  */
@@ -689,13 +684,7 @@ footer .copyright {
   /* #endregion */
 }
 
-
-
-
-
-
 @media all and (max-width: 360px) {
-
 
   .promo {
     max-height: calc(693rem/16);
