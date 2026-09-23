@@ -90,7 +90,7 @@ body {
 /* #endregion */
 
 /* #region Promo */
-.promo {
+header {
   display: grid;
   grid-template-columns: 1fr 2fr;
 
@@ -98,7 +98,7 @@ body {
   position: relative;
 }
 
-.promo .promo-bg {
+header .promo-bg {
   grid-column: 1/2;
   position: absolute;
   background: url('../src/images/potter.png') center / cover no-repeat;
@@ -107,7 +107,7 @@ body {
 }
 
 
-.promo .container {
+header .container {
   grid-column: 1/3;
   display: flex;
   flex-direction: column;
@@ -117,7 +117,7 @@ body {
 
 
 /* #region Promo Header */
-header {
+.promo-header {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -140,31 +140,31 @@ header {
   width: 100%;
 }
 
-.promo .header-menu {
+header .header-menu {
   visibility: hidden;
   height: 20px;
   width: 20px;
 }
 
-.promo header .logo img {
+header .promo-header .logo img {
   width: 9em;
   height: 9em;
 }
 
-.promo header .nav-list {
+header .promo-header .nav-list {
   display: flex;
   justify-content: center;
   gap: 3.5rem;
 }
 
-.promo header .nav-list a {
+header .promo-header .nav-list a {
   font-size: calc(20/16rem);
   text-transform: uppercase;
   font-weight: 400;
 }
 
 
-.promo header .header-icons {
+header .promo-header .header-icons {
   display: flex;
   flex-direction: row;
   width: 3.5em;
@@ -176,7 +176,7 @@ header {
 
 /* #region Promo Wrapper */
 
-.promo .promo-wrapper {
+header .promo-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -184,13 +184,13 @@ header {
   row-gap: 3em;
 }
 
-.promo .promo-wrapper .promo-wrapper-top {
+header .promo-wrapper .promo-wrapper-top {
   display: flex;
   width: 100%;
   justify-content: flex-end;
 }
 
-.promo .promo-wrapper .promo-title {
+header .promo-wrapper .promo-title {
   max-width: 40%;
   align-self: flex-end;
   font-style: italic;
@@ -199,7 +199,7 @@ header {
   text-transform: uppercase;
 }
 
-.promo .promo-wrapper .promo-img {
+header .promo-wrapper .promo-img {
   background-image: url('../src/images/promo-dream.png');
   background-position: center;
   background-size: cover;
@@ -209,7 +209,7 @@ header {
   width: 20%;
 }
 
-.promo .promo-wrapper button {
+header .promo-wrapper button {
   width: 20%;
   padding: 18px 0;
   justify-self: flex-end;
@@ -501,32 +501,32 @@ footer .copyright {
     gap: calc(60rem/16);
   }
 
-  .promo {
+  header{
     column-gap: .8em;
     max-height: 633px;
   }
 
-  .promo .container {
+  header .container {
     padding-top: 3em;
     padding-right: 2em;
   }
 
   /*#region Promo Header */
 
-  .promo header .header-top {
+  header .promo-header .header-top {
     margin-bottom: 1.2em;
   }
 
-  .promo header .logo img {
+  header .promo-header .logo img {
     width: 6em;
     height: 6em;
   }
 
-  .promo header .nav-list {
+  header .promo-header .nav-list {
     gap: 1.8rem;
   }
 
-  .promo header .nav-list li:last-of-type {
+  header .promo-header .nav-list li:last-of-type {
     margin-right: 0;
   }
 
@@ -535,23 +535,23 @@ footer .copyright {
 
   /*#region Promo Wrapper */
 
-  .promo .promo-wrapper {
+  header .promo-wrapper {
     row-gap: 1em;
   }
 
-  .promo .promo-wrapper .promo-title {
+  header .promo-wrapper .promo-title {
     font-size: 1.5em;
     margin-right: .5em;
 
   }
 
 
-  .promo .promo-wrapper .promo-img {
+  header .promo-wrapper .promo-img {
     height: 20em;
     width: calc((231 * 100% / 1140));
   }
 
-  .promo .promo-wrapper button {
+  header .promo-wrapper button {
     padding: 13px 0;
     width: calc((231 * 100% / 1140));
   }
@@ -600,38 +600,38 @@ footer .copyright {
 @media all and (max-width: 768px) {
 
   /* #region promo  */
-  .promo {
+  header{
     grid-template-columns: 1fr;
     padding: 3em 1.5em 0 6em;
     gap: 0;
     max-height: calc(649rem/16);
   }
 
-  .promo .promo-bg {
+  header .promo-bg {
     display: none;
   }
 
-  .promo .container {
+  header .container {
     grid-column: 1/2;
     padding: 0;
 
   }
 
   /* Promo Header */
-  .promo .promo-wrapper .promo-wrapper-top {
+  header .promo-wrapper .promo-wrapper-top {
     justify-content: space-between;
   }
 
-  .promo .promo-title {
+  header .promo-title {
     align-items: flex-start;
     margin: 0;
   }
 
-  .promo .promo-wrapper .promo-img {
+  header .promo-wrapper .promo-img {
     width: calc(231rem/16);
   }
 
-  .promo .promo-wrapper button {
+  header .promo-wrapper button {
     width: calc(231rem/16);
   }
 
@@ -686,7 +686,7 @@ footer .copyright {
 
 @media all and (max-width: 360px) {
 
-  .promo {
+  header{
     max-height: calc(693rem/16);
     padding: 0;
     padding: 50px 10px 0 10px;
@@ -695,21 +695,21 @@ footer .copyright {
   /* #region Promo */
 
   /* #region Promo Header */
-  .promo header {
+  header .promo-header {
     margin: 0;
     justify-content: space-between;
   }
 
 
-  .promo header .header-menu {
+  header .promo-header .header-menu {
     visibility: visible;
   }
 
-  .promo header .logo {
+  header .promo-header .logo {
     margin: 0;
   }
 
-  .promo header .header-nav {
+  header .promo-header .header-nav {
     display: none;
   }
 
@@ -718,11 +718,11 @@ footer .copyright {
 
   /* #endregion */
 
-  .promo .promo-wrapper {
+  header .promo-wrapper {
     justify-content: center;
   }
 
-  .promo .promo-wrapper .promo-wrapper-top {
+  header .promo-wrapper .promo-wrapper-top {
     flex-direction: column;
     align-items: center;
     max-height: calc(475rem/16);
@@ -730,7 +730,7 @@ footer .copyright {
     gap: 2.5rem;
   }
 
-  .promo .promo-wrapper .promo-title {
+  header .promo-wrapper .promo-title {
     text-align: center;
     margin: 0;
 
@@ -739,12 +739,12 @@ footer .copyright {
   }
 
 
-  .promo .promo-wrapper .promo-img {
+  header .promo-wrapper .promo-img {
     height: calc(377rem/16);
     width: calc(270rem / 16);
   }
 
-  .promo button {
+  header button {
 
     margin-top: 0;
   }
