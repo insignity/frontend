@@ -80,6 +80,14 @@ input:invalid {
   width: 100%;
 }
 
+.wrapper-d-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -161,7 +169,7 @@ main .container {
   display: flex;
   flex-direction: column;
   row-gap: calc(60rem/16);
-  padding: 0 2rem;
+  padding: 0 calc(30rem/16);
 }
 
 /* #region digital notes */
@@ -179,11 +187,6 @@ main .corner-decoration {
   border-left: 1px solid var(--dark-color);
 }
 
-main .main-d-flex {
-  display: flex;
-  flex-direction: row;
-}
-
 main .digital-notes p {
   font-size: 1rem;
   font-weight: 400;
@@ -191,30 +194,28 @@ main .digital-notes p {
 
 main .pottery-secrets,
 main .pottery-materials {
-  flex: 1 1 0;
-  margin: 1.5rem;
+  flex: auto;
+  width: calc(520rem/16);
+  margin: calc(25rem/16);
   border: 1px solid black;
   box-shadow: 5px 5px 10px #00000044;
 }
 
 
-main .digital-notes h3 {
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: calc(24rem/16);
-  text-align: start;
-}
 
 main .digital-notes .item-top {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-items: stretch;
+  gap: calc(25rem/16);
 }
 
 main .digital-notes figure {
   min-width: calc(240rem/16);
   width: 50%;
   height: calc(240rem/16);
-  margin-right: 1.5rem;
 }
 
 main .digital-notes .title-button {
@@ -223,6 +224,15 @@ main .digital-notes .title-button {
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 1.5rem;
+  width: calc(285rem/16);
+}
+
+
+main .digital-notes h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: calc(24rem/16);
+  text-align: start;
 }
 
 main .digital-notes button {
@@ -247,17 +257,14 @@ main .digital-notes .item-bottom {
 footer {
   background-color: #232323;
   color: var(--light-color);
-}
-
-footer {
   height: 100%;
   padding-top: calc(80rem/16);
+  padding-bottom: calc(50rem/16);
 }
 
-footer .footer-d-flex {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2rem;
+footer .wrapper-d-flex {
+  column-gap: calc(313rem/16);
+  row-gap: 2.5rem;
   margin-bottom: 1rem;
 }
 
@@ -270,10 +277,11 @@ footer h2 {
 /* #region newsletter */
 
 footer .newsletter {
-  height: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
+  flex: auto;
+  width: calc(293rem/16);
 }
 
 footer .newsletter .footer-form {
@@ -316,7 +324,7 @@ footer .newsletter button:hover {
 
 footer .footer-nav--follow {
   display: flex;
-  justify-content: space-between;
+  gap: 19rem;
   flex-basis: calc(700rem/16);
   flex-shrink: 1;
 }
@@ -327,7 +335,11 @@ footer .footer-nav {
   display: flex;
   flex-direction: row;
   column-gap: calc(66rem/16);
-
+  flex: auto;
+  width: calc(428rem/16);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 2.5rem;
 }
 
 footer .footer-nav h2,
@@ -347,6 +359,18 @@ footer .footer-nav .discover-list {
   display: flex;
   flex-direction: column;
   row-gap: 1.25rem;
+  flex: auto;
+  width: 4.5rem;
+}
+
+footer .footer-nav .shopping {
+  flex: auto;
+  width: calc(74rem/16);
+}
+
+footer .footer-nav .information {
+  flex: auto;
+  width: calc(150rem/16);
 }
 
 /* #endregion */
@@ -355,6 +379,9 @@ footer .follow-us {
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
+  flex: auto;
+  width: calc(92rem/16);
+
 }
 
 footer .follow-us .social-media {
@@ -366,11 +393,9 @@ footer .copyright {
   text-align: center;
 }
 
-
 /* #endregion footer */
 
-
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1920px) {
   body {
     gap: calc(60rem/16);
   }
@@ -396,29 +421,23 @@ footer .copyright {
 
   /*#endregion */
 
-
   /* #region footer */
   footer {
-    padding: calc(50rem/16) calc(30rem/16);
+    padding: calc(50rem/16) 0;
   }
 
-  footer .footer-d-flex {
-    padding: 0;
+  footer .wrapper-d-flex {
     margin-bottom: 3rem;
-    flex-wrap: wrap;
-    gap: 2.5rem;
+    column-gap: calc(163rem/16);
   }
 
   /* #endregion */
 }
 
-
-
-
-
-
-
-@media all and (max-width: 768px) {
+@media all and (max-width: 1200px) {
+  .container {
+    padding: 0 1.5rem;
+  }
 
   .main-d-flex {
     flex-wrap: wrap;
@@ -426,7 +445,15 @@ footer .copyright {
 
   /* #region footer  */
   footer {
-    padding: calc(50rem/16) 1.5rem;
+    padding: calc(50rem/16) 0;
+  }
+
+  footer .wrapper-d-flex {
+    column-gap: calc(197rem/16);
+  }
+
+  footer .newsletter {
+    width: 100%;
   }
 
   footer .footer-nav--follow {
@@ -435,16 +462,13 @@ footer .copyright {
   }
 
   /* #endregion */
-
-
 }
 
+@media all and (max-width: 768px) {
 
-
-
-
-
-@media all and (max-width: 360px) {
+  .container {
+    padding: 0 .5rem;
+  }
 
   /* #region Header */
   header {
@@ -487,17 +511,14 @@ footer .copyright {
     margin: 0;
   }
 
-  main .digital-notes .item-top {
-    flex-wrap: wrap;
-  }
-
   main .digital-notes figure {
     width: 100%;
     margin-right: 0;
   }
 
-  main .title-button {
-    padding: 1.5rem;
+  main .digital-notes .title-button {
+    padding: 0;
+    padding-left: 1.5rem;
   }
 
   main .item-top h3 {
@@ -513,14 +534,20 @@ footer .copyright {
   /*  #region footer */
 
   footer {
-    padding: calc(50rem/16) calc(10rem/16);
+    padding: calc(50rem/16) 0;
   }
 
 
   footer .footer-nav {
-    flex-wrap: wrap;
-    row-gap: 2em;
-    align-content: start;
+    width: calc(212rem/16);
+  }
+
+  footer .footer-nav .information {
+    width: 100%;
+  }
+
+  footer .follow-us {
+    width: 100%;
   }
 
   /* #endregion */
