@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* Переменные  */
+/* Миксины */
+/* @mixin box и @import box или =box и +box */
+/* Наследования */
+h1, h2, .block h3 {
+  border: 1px solid #ccc;
+  padding: 10px; }
+
+h1 {
+  color: red;
+  display: block;
+  width: 250px;
+  height: 200px;
+  background-color: red; }
+  @media screen and (max-width: 550px) {
+    h1 {
+      color: blue; } }
+
+h2 {
+  color: blue; }
+
+.block {
+  background-color: black; }
+  .block h3 {
+    color: white; }
+  .block_color {
+    background-color: #fff; }
+    .block_color button {
+      display: inline-block;
+      width: 250px;
+      height: 200px;
+      background-color: red; }
+
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.item-3 {
+  width: 6em; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,43 @@
+/* Переменные  */
+$text_color: red
+$second_color: blue
+
+/* Миксины */
+/* @mixin box и @import box или =box и +box */
+=box($display)
+    display: $display
+    width: 200px + 50px
+    height: 200px
+    background-color: $text_color
+
+/* Наследования */
+%message
+    border: 1px solid #ccc
+    padding: 10px
+
+h1
+    color: $text_color
+    +box(block)
+    @extend %message
+    @media screen and (max-width: 550px)
+        color: $second_color
+
+h2
+    color: $second_color
+    @extend %message
+
+.block
+    background-color: black
+    h3
+        color: white
+        @extend %message
+    &_color
+        background-color: #fff
+        button
+            // mixin @include box or +box
+            +box(inline-block)
+
+// for
+@for $i from 1 through 3
+    .item-#{$i}
+        width: 2em * $i
